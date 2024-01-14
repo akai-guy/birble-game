@@ -1,5 +1,5 @@
 import './App.css';
-import rawVal from '../src/guessWords.txt';
+import rawVal from '../src/validWords.txt';
 import rawGuess from '../src/guessWords.txt';
 
 
