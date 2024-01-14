@@ -68,7 +68,7 @@ function App() {
         text+="\r\n"
         for (var i in text){
           if (text[i] === '\n'){
-            words.push(text.slice(i-6,i-1))
+            words.push(text.slice(i-5,i))
           }
         }
         var chosenWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
@@ -115,11 +115,10 @@ function App() {
     fetch(rawVal)
       .then((res) => res.text())
       .then((text) => {
-        console.log(text);
         text+="\r\n"
         for (var word in text){
           if (text[word] === '\n'){
-            words.push(text.slice(word-6,word-1))
+            words.push(text.slice(word-5,word))
           }
             }
 
