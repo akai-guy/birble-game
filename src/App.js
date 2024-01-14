@@ -188,7 +188,7 @@ function App() {
   }
 
   function help(){
-    alert("It's Wordle but you're guessing a Bible-related word. If you don't know how to play Wordle, go on their site and look at their rules.");
+    alert("It's Wordle but you have 6 guesses to guess a randomly chosen Bible-related word. With every guess, each letter will turn green if its in the target word and in the right position, it will turn yellow if its in the target word and in the wrong position, and it will turn red if its not in the target word at all. The amount of greens/yellows are limited to the number of occurences a given letter appears in the target word. For example, if the target word is AMONG and you guess MAMMA, only the first M will turn yellow while the rest turn red. If you guess GOING however, the last G will turn green while the first one turns red because there are no more G's in AMONG. \n\nNOTE: On a mobile device, you have to press the back button to exit your keyboard and see the your entry table and the website keyboard at the same time. To be able to enter a word again, tap on the entry table.");
     var rowTarget = 0;
     for (var row=0;row<6;row++){
       if(document.getElementById("row" + row).value){
