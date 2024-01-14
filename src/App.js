@@ -2,7 +2,6 @@ import './App.css';
 import rawVal from '../src/validWords.txt';
 import rawGuess from '../src/guessWords.txt';
 
-
 function App() {
   genWord();
   function letterDisplay(row){
