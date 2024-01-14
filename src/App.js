@@ -65,7 +65,7 @@ function App() {
     fetch(rawGuess)
       .then((res) => res.text())
       .then((text) => {
-        text+="\r\n"
+        text+="\n"
         for (var i in text){
           if (text[i] === '\n'){
             words.push(text.slice(i-5,i))
@@ -115,7 +115,7 @@ function App() {
     fetch(rawVal)
       .then((res) => res.text())
       .then((text) => {
-        text+="\r\n"
+        text+="\n"
         for (var word in text){
           if (text[word] === '\n'){
             words.push(text.slice(word-5,word))
