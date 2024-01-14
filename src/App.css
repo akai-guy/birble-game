@@ -166,7 +166,7 @@ table {
 }
 
 .keyBoardCell{
-  width:4.511278195488722vh;
+  width:2.34375vw;
   height:4.511278195488722vh;
   border: 0.3007518796992481vh solid white;
   border-radius:0.45112781954887216vh;
@@ -180,7 +180,7 @@ table {
 }
 
 .keyGreen{
-  width:4.511278195488722vh;
+  width:2.34375vw;
   height:4.511278195488722vh;
   border: 0.3007518796992481vh solid white;
   border-radius:0.45112781954887216vh;
@@ -201,7 +201,7 @@ table {
 }
 
 .keyYellow{
-  width:4.511278195488722vh;
+  width:2.34375vw;
   height:4.511278195488722vh;
   border: 0.3007518796992481vh solid white;
   border-radius:0.45112781954887216vh;
@@ -222,7 +222,7 @@ table {
 }
 
 .keyRed{
-  width:4.511278195488722vh;
+  width:2.34375vw;
   height:4.511278195488722vh;
   border: 0.3007518796992481vh solid white;
   border-radius:0.45112781954887216vh;
@@ -248,7 +248,7 @@ table {
 
 .keyboard{
   background:hsla(0, 0%, 0%, 0.8);
-  width:77vh;
+  width:40vw;
   height:22vh;
   margin:auto;
   padding:2vh;
