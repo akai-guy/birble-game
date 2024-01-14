@@ -201,7 +201,7 @@ function App() {
   return (
     <div className="App">
       <div className="title">
-        <span className="titleText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIrBLE&nbsp;&nbsp;&nbsp;</span>
+        <span className="titleText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BIrBLE</strong>&nbsp;&nbsp;&nbsp;</span>
         <button id="Help" onClick={help}>e</button>
       </div>
       <div className="game">
