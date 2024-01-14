@@ -115,6 +115,7 @@ function App() {
     fetch(rawVal)
       .then((res) => res.text())
       .then((text) => {
+        console.log(text);
         text+="\r\n"
         for (var word in text){
           if (text[word] === '\n'){
