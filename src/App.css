@@ -1,0 +1,304 @@
+.App {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:ghostwhite;
+  height:100vh;
+  background-image: url("background_starry.jpg");
+  background-size: 100% 100%;
+  pointer-events: none;
+}
+
+#newGame{
+  background: hsla(0, 0%, 0%, 0.2);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2vh;
+  border-color:white;
+  border-width:0.15037593984962405vh;
+  border-radius: 0.6015037593984962vh;
+  border-style:solid;
+  height:4.511278195488722vh;
+  margin: 0.45112781954887216vh;
+  pointer-events: auto;
+}
+
+#newGame:active{
+  background: hsla(0, 0%, 0%, 0.4);
+  color:aqua;
+  font-weight: bold;
+}
+
+#newGame:hover{
+  background: hsla(0, 0%, 100%, 0.2);
+}
+
+.title{
+  padding:4vh 0vh 0vh 0vh;
+  width: 100%;
+  height: 8vh;
+  margin:auto;
+  font-size:6.015037593984962vh;
+  background: hsla(0, 0%, 0%, 0.4);
+}
+
+.titleText{
+  display: inline-block;
+  vertical-align: middle;
+}
+#Help{
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("icon.png");
+  background-size: 100% 100%;
+  width:5vh;
+  height:5vh;
+  border:none;
+  color:transparent;
+  background-color: transparent;
+  pointer-events: auto;
+  border-radius: 50%;
+}
+#Help:hover{
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+#Help:active{
+  background-color: aqua;
+}
+
+.game{
+  background: hsla(0, 0%, 0%, 0.4);
+  height:86vh;
+  padding-top:2vh;
+}
+
+.gameTable{
+  pointer-events:all;
+}
+
+table {
+  margin:auto;
+}
+
+.birbleRow{
+  background: transparent;
+  border: none;
+  max-width: 0.15037593984962405vh;
+  outline-width: 0;
+}
+
+#wordToGuess{
+  background: transparent;
+  border: none;
+  max-width: 0.15037593984962405vh;
+  outline-width: 0;
+}
+
+.green{
+  width: 6.015037593984962vh;
+  height: 6.015037593984962vh;
+  border: 0.3007518796992481vh solid white;
+  font-size:4.511278195488722vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:black;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  animation-name: revGreen;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revGreen {
+  from {background-color: hsla(0, 0%, 100%, 0.2)}
+  to {background-color: hsla(120, 100%, 69%, 0.5)}
+}
+
+.yellow{
+  width: 6.015037593984962vh;
+  height: 6.015037593984962vh;
+  border: 0.3007518796992481vh solid white;
+  font-size:4.511278195488722vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:black;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  animation-name: revYellow;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revYellow {
+  from {background-color:  hsla(0, 0%, 100%, 0.2)}
+  to {background-color: rgb(249, 249, 26, 0.4)}
+}
+
+.red{
+  width: 6.015037593984962vh;
+  height: 6.015037593984962vh;
+  border: 0.3007518796992481vh solid white;
+  font-size:4.511278195488722vh;
+  background-color:hsla(0, 0%, 100%, 0.2);
+  color:black;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  animation-name: revRed;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revRed {
+  from {background-color:hsla(0, 0%, 100%, 0.2)}
+  to {background-color:hsla(0, 100%, 50%, 0.5)}
+}
+
+.birbCell{
+  width:6.015037593984962vh;
+  height:6.015037593984962vh;
+  border: 0.3007518796992481vh solid white;
+  font-size:4.511278195488722vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:white;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+}
+
+.keyBoardCell{
+  width:4.511278195488722vh;
+  height:4.511278195488722vh;
+  border: 0.3007518796992481vh solid white;
+  border-radius:0.45112781954887216vh;
+  font-size:3.7593984962406015vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:white;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  padding:0.45112781954887216vh;
+}
+
+.keyGreen{
+  width:4.511278195488722vh;
+  height:4.511278195488722vh;
+  border: 0.3007518796992481vh solid white;
+  border-radius:0.45112781954887216vh;
+  font-size:3.7593984962406015vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:white;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  padding:0.45112781954887216vh;
+  animation-name: revKeyGreen;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes revKeyGreen {
+  from {background-color:hsla(0, 0%, 100%, 0.2)}
+  to {background-color:hsla(120, 100%, 69%, 0.5)}
+}
+
+.keyYellow{
+  width:4.511278195488722vh;
+  height:4.511278195488722vh;
+  border: 0.3007518796992481vh solid white;
+  border-radius:0.45112781954887216vh;
+  font-size:3.7593984962406015vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:white;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  padding:0.45112781954887216vh;
+  animation-name: revKeyYellow;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes revKeyYellow {
+  from {background-color:hsla(0, 0%, 100%, 0.2)}
+  to {background-color:rgb(249, 249, 26, 0.4)}
+}
+
+.keyRed{
+  width:4.511278195488722vh;
+  height:4.511278195488722vh;
+  border: 0.3007518796992481vh solid white;
+  border-radius:0.45112781954887216vh;
+  font-size:3.7593984962406015vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:white;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  padding:0.45112781954887216vh;
+  animation-name: revKeyRed;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
+@keyframes revKeyRed {
+  from {background-color:hsla(0, 0%, 100%, 0.2)}
+  to {background-color:hsla(0, 100%, 50%, 0.5)}
+}
+
+.keyBoardRow{
+  margin-bottom:0.6015037593984962vh;
+}
+
+.keyboard{
+  background:hsla(0, 0%, 0%, 0.8);
+  width:77vh;
+  height:22vh;
+  margin:auto;
+  padding:2vh;
+}
+
+.cellContent{
+  font-size:5.2631578947368425vh;
+}
+
+.blank{
+  color: transparent;
+}
+
+.message{
+  margin:auto;
+  padding:0.7518796992481203vh;
+  width:30vh;
+  font-size:2.406015037593985vh;
+  font-weight:bold;
+  border: 0.3007518796992481vh solid white;
+  border-radius: 0.6015037593984962vh;
+}
+
+.messageHidden{
+  background-color: transparent;
+  color: transparent;
+  border:0;
+  
+}
+
+.messageReveal{
+  background-color: transparent;
+  color: transparent;
+  animation-name: msgReveal;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  border:0;
+}
+
+@keyframes msgReveal{
+  from {background-color: transparent;
+    color: transparent;
+    border:0;}
+  to {background-color:hsla(0, 0%, 0%, 0.2);
+    color: white;
+    border: 0.15037593984962405vh solid white;
+    border-radius: 0.6015037593984962vh;}
+}
+
+#other{
+  margin:0.7518796992481203vh;
+  height:14vh;
+}
