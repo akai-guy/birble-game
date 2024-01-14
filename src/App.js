@@ -1,6 +1,6 @@
 import './App.css';
-import rawVal from './validWords.txt';
-import rawGuess from './guessWords.txt';
+import rawVal from '../src/guessWords.txt';
+import rawGuess from '../src/guessWords.txt';
 
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
         text+="\r\n"
         for (var i in text){
           if (text[i] === '\n'){
-            words.push(text.slice(i-6,i-1))
+            words.push(text.slice(i-5,i))
           }
         }
         var chosenWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
@@ -118,7 +118,7 @@ function App() {
         text+="\r\n"
         for (var word in text){
           if (text[word] === '\n'){
-            words.push(text.slice(word-6,word-1))
+            words.push(text.slice(word-5,word))
           }
             }
 
