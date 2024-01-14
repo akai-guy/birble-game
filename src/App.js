@@ -215,7 +215,7 @@ function App() {
               <td className="birbCell" id="cell02"><label className="cellContent blank" id="letterCell02" for="row0">_</label></td>
               <td className="birbCell" id="cell03"><label className="cellContent blank" id="letterCell03" for="row0">_</label></td>
               <td className="birbCell" id="cell04"><label className="cellContent blank" id="letterCell04" for="row0">_</label></td>
-              <input id="row0" className="birbleRow" type="text" maxLength={5} minLength={5} onChange={() => letterDisplay(0)}
+              <input id="row0" className="birbleRow" type="text" maxLength={5} onChange={() => letterDisplay(0)}
                 onBlur={e => {
                 if (e.relatedTarget === null) {
                     e.target.focus();
@@ -228,7 +228,7 @@ function App() {
               <td className="birbCell" id="cell12"><label className="cellContent blank" id="letterCell12" for="row1">_</label></td>
               <td className="birbCell" id="cell13"><label className="cellContent blank" id="letterCell13" for="row1">_</label></td>
               <td className="birbCell" id="cell14"><label className="cellContent blank" id="letterCell14" for="row1">_</label></td>
-              <input id="row1" className="birbleRow" type="text" disabled maxLength={5} minLength={5} onChange={() => letterDisplay(1)} onBlur={e => {
+              <input id="row1" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(1)} onBlur={e => {
                 if (e.relatedTarget === null) {
                     e.target.focus();
                 }
@@ -240,7 +240,7 @@ function App() {
               <td className="birbCell" id="cell22"><label className="cellContent blank" id="letterCell22" for="row2">_</label></td>
               <td className="birbCell" id="cell23"><label className="cellContent blank" id="letterCell23" for="row2">_</label></td>
               <td className="birbCell" id="cell24"><label className="cellContent blank" id="letterCell24" for="row2">_</label></td>
-              <input id="row2" className="birbleRow" type="text" disabled maxLength={5} minLength={5} onChange={() => letterDisplay(2)} onBlur={e => {
+              <input id="row2" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(2)} onBlur={e => {
                 if (e.relatedTarget === null) {
                     e.target.focus();
                 }
@@ -252,7 +252,7 @@ function App() {
               <td className="birbCell" id="cell32"><label className="cellContent blank" id="letterCell32" for="row3">_</label></td>
               <td className="birbCell" id="cell33"><label className="cellContent blank" id="letterCell33" for="row3">_</label></td>
               <td className="birbCell" id="cell34"><label className="cellContent blank" id="letterCell34" for="row3">_</label></td>
-              <input id="row3" className="birbleRow" type="text" disabled maxLength={5} minLength={5} onChange={() => letterDisplay(3)} onBlur={e => {
+              <input id="row3" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(3)} onBlur={e => {
                 if (e.relatedTarget === null) {
                     e.target.focus();
                 }
@@ -264,7 +264,7 @@ function App() {
               <td className="birbCell" id="cell42"><label className="cellContent blank" id="letterCell42" for="row4">_</label></td>
               <td className="birbCell" id="cell43"><label className="cellContent blank" id="letterCell43" for="row4">_</label></td>
               <td className="birbCell" id="cell44"><label className="cellContent blank" id="letterCell44" for="row4">_</label></td>
-              <input id="row4" className="birbleRow" type="text" disabled maxLength={5} minLength={5} onChange={() => letterDisplay(4)} onBlur={e => {
+              <input id="row4" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(4)} onBlur={e => {
                 if (e.relatedTarget === null) {
                     e.target.focus();
                 }
@@ -276,7 +276,7 @@ function App() {
               <td className="birbCell" id="cell52"><label className="cellContent blank" id="letterCell52" for="row5">_</label></td>
               <td className="birbCell" id="cell53"><label className="cellContent blank" id="letterCell53" for="row5">_</label></td>
               <td className="birbCell" id="cell54"><label className="cellContent blank" id="letterCell54" for="row5">_</label></td>
-              <input id="row5" className="birbleRow" type="text" disabled maxLength={5} minLength={5} onChange={() => letterDisplay(5)} onBlur={e => {
+              <input id="row5" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(5)} onBlur={e => {
                 if (e.relatedTarget === null) {
                     e.target.focus();
                 }
