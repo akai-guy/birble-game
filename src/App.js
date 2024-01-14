@@ -143,7 +143,9 @@ function App() {
           }
           else{
             document.getElementById("cell" + rowTarget + i).className = "birbCell red";
-            document.getElementById("" + letterOne).className = "keyBoardCell keyRed";
+            if (!document.getElementById("" + letterOne).className === "keyBoardCell keyGreen"){
+              document.getElementById("" + letterOne).className = "keyBoardCell keyRed";
+            }
           }
         }
 
