@@ -50,6 +50,8 @@ function App() {
   }
 
   function letterDisplay(row){
+    
+    rowMobile = row;
     var input = document.getElementById("row" + row); 
     var inputVal = document.getElementById("row" + row).value.toUpperCase(); //capital letter input 
 
