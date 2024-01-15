@@ -38,6 +38,7 @@ function App() {
       }
       if (wordMobile.length > 5){
         wordMobile = wordMobile.slice(0, 5);
+        document.getElementById("row" + rowMobile).value = document.getElementById("row" + rowMobile).value.slice(0, 5);
 
         return "";
       }
