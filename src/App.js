@@ -221,6 +221,7 @@ function App() {
         }
         
         rowMobile += 1;
+        wordMobile ="";
 
         document.getElementById("row" + rowTarget).disabled = true;
         if (input === targetWord){
