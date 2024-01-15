@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+#Enter{
+  padding:0 0.6vw;
+}
+
 #newGame{
   background: hsla(0, 0%, 0%, 0.2);
   color: white;
@@ -45,6 +49,16 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+#bspImg{
+  display: inline-block;
+  vertical-align: middle;
+  width:2.7vw;
+  height:2vw;
+  margin: 0.3vh 0.7vw;
+  padding-bottom: 0.15vh;
+}
+
 #Help{
   display: inline-block;
   vertical-align: middle;
@@ -177,7 +191,9 @@ table {
   font-family:arial, helvetica, sans-serif;
   user-select: none;
   padding:0.45112781954887216vh;
+  pointer-events:auto !important;
 }
+
 
 .keyGreen{
   width:2.34375vw;
