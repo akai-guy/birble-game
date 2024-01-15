@@ -281,7 +281,7 @@ table {
     font-family:arial, helvetica, sans-serif;
     user-select: none;
     padding:0.45112781954887216vh;
-    animation-name: revKeyGreen;
+    animation-name: revKeyYellow;
     animation-duration:1s;
     animation-fill-mode: forwards;
   }
@@ -320,7 +320,7 @@ table {
     font-family:arial, helvetica, sans-serif;
     user-select: none;
     padding:0.45112781954887216vh;
-    animation-name: revKeyGreen;
+    animation-name: revKeyRed;
     animation-duration:1s;
     animation-fill-mode: forwards;
   }
