@@ -36,7 +36,9 @@ function App() {
         document.getElementById("row" + rowMobile).value += inputLetter;
         var inputVal = document.getElementById("row" + rowMobile).value.toUpperCase();
       }
-      if (inputVal.length > 5){
+      if (wordMobile.length > 5){
+        wordMobile = wordMobile.slice(0, 5);
+
         return "";
       }
       wordMobile = inputVal;
