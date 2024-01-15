@@ -196,7 +196,7 @@ table {
 
 @media only screen and (min-width: 800px){
   .keyBoardCell{
-    width:2.34375vw;
+    width:4vw;
     height:4.511278195488722vh;
     border: 0.3007518796992481vh solid white;
     border-radius:0.45112781954887216vh;
@@ -213,7 +213,7 @@ table {
 
 
 .keyGreen{
-  width:2.34375vw;
+  width:4vw;
   height:4.511278195488722vh;
   border: 0.3007518796992481vh solid white;
   border-radius:0.45112781954887216vh;
@@ -234,7 +234,7 @@ table {
 }
 
 .keyYellow{
-  width:2.34375vw;
+  width:4vw;
   height:4.511278195488722vh;
   border: 0.3007518796992481vh solid white;
   border-radius:0.45112781954887216vh;
@@ -255,7 +255,7 @@ table {
 }
 
 .keyRed{
-  width:2.34375vw;
+  width:4vw;
   height:4.511278195488722vh;
   border: 0.3007518796992481vh solid white;
   border-radius:0.45112781954887216vh;

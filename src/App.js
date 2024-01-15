@@ -203,7 +203,7 @@ function App() {
           }
           else{
             document.getElementById("cell" + rowTarget + i).className = "birbCell red";
-            if (!document.getElementById("" + letterOne).className === "keyBoardCell keyGreen"){
+            if (!(document.getElementById("" + letterOne).className === "keyBoardCell keyGreen")){
               document.getElementById("" + letterOne).className = "keyBoardCell keyRed";
             }
           }
@@ -213,7 +213,7 @@ function App() {
           var letterTwo = input[j].toLowerCase();
           if(chosenWord.includes(input[j]) && !(targetWord[j] === input[j])){
             document.getElementById("cell" + rowTarget + j).className = "birbCell yellow";
-            if (!document.getElementById("" + letterOne).className === "keyBoardCell keyGreen"){
+            if (!(document.getElementById("" + letterOne).className === "keyBoardCell keyGreen")){
               document.getElementById("" + letterTwo).className = "keyBoardCell keyYellow";
             }
 
