@@ -36,6 +36,9 @@ function App() {
         document.getElementById("row" + rowMobile).value += inputLetter;
         var inputVal = document.getElementById("row" + rowMobile).value.toUpperCase();
       }
+      if (inputVal.length > 5){
+        return "";
+      }
       wordMobile = inputVal;
 
       for (var i = 0; i < wordMobile.length; i++){
@@ -104,6 +107,8 @@ function App() {
     document.getElementById("b").className = "keyBoardCell";
     document.getElementById("n").className = "keyBoardCell";
     document.getElementById("m").className = "keyBoardCell";
+    document.getElementById("Backspace").className = "keyBoardCell";
+    document.getElementById("Enter").className = "keyBoardCell";
   }
 
   function genWord(){
@@ -229,12 +234,16 @@ function App() {
           document.getElementById("message").innerHTML = "YOU WIN! :)";
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
+          document.getElementById("Backspace").className = "keyDisabled";
+          document.getElementById("Enter").className = "keyDisabled";
           return"";
         }
         if(rowTarget===5){
           document.getElementById("message").innerHTML = "You lost bro. The word was: " + targetWord;
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
+          document.getElementById("Backspace").className = "keyDisabled";
+          document.getElementById("Enter").className = "keyDisabled";
           return "";
         }
         if (!isMedia){
@@ -250,14 +259,8 @@ function App() {
 
   function submitGuess(){
     document.getElementById("message").className = "message messageHidden";
-    var rowTarget = 0;
-    for (var row=0;row<6;row++){
-      if(document.getElementById("row" + row).value){
-        rowTarget = row;
-      }
-    }
-    var input = document.getElementById("row" + rowTarget).value.toUpperCase();
-    processGuess(input, rowTarget);
+    var input = document.getElementById("row" + rowMobile).value.toUpperCase();
+    processGuess(input, rowMobile);
   }
 
   function help(){
@@ -304,7 +307,7 @@ function App() {
               <td className="birbCell" id="cell12"><label className="cellContent blank" id="letterCell12" for="row1">_</label></td>
               <td className="birbCell" id="cell13"><label className="cellContent blank" id="letterCell13" for="row1">_</label></td>
               <td className="birbCell" id="cell14"><label className="cellContent blank" id="letterCell14" for="row1">_</label></td>
-              <input id="row1" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(1)} onBlur={e => focus(e)}></input>
+              <input id="row1" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(1)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow2">
               <td className="birbCell" id="cell20"><label className="cellContent blank" id="letterCell20" for="row2">_</label></td>
@@ -312,7 +315,7 @@ function App() {
               <td className="birbCell" id="cell22"><label className="cellContent blank" id="letterCell22" for="row2">_</label></td>
               <td className="birbCell" id="cell23"><label className="cellContent blank" id="letterCell23" for="row2">_</label></td>
               <td className="birbCell" id="cell24"><label className="cellContent blank" id="letterCell24" for="row2">_</label></td>
-              <input id="row2" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(2)} onBlur={e => focus(e)}></input>
+              <input id="row2" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(2)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow3">
               <td className="birbCell" id="cell30"><label className="cellContent blank" id="letterCell30" for="row3">_</label></td>
@@ -320,7 +323,7 @@ function App() {
               <td className="birbCell" id="cell32"><label className="cellContent blank" id="letterCell32" for="row3">_</label></td>
               <td className="birbCell" id="cell33"><label className="cellContent blank" id="letterCell33" for="row3">_</label></td>
               <td className="birbCell" id="cell34"><label className="cellContent blank" id="letterCell34" for="row3">_</label></td>
-              <input id="row3" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(3)} onBlur={e => focus(e)}></input>
+              <input id="row3" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(3)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow4">
               <td className="birbCell" id="cell40"><label className="cellContent blank" id="letterCell40" for="row4">_</label></td>
@@ -328,7 +331,7 @@ function App() {
               <td className="birbCell" id="cell42"><label className="cellContent blank" id="letterCell42" for="row4">_</label></td>
               <td className="birbCell" id="cell43"><label className="cellContent blank" id="letterCell43" for="row4">_</label></td>
               <td className="birbCell" id="cell44"><label className="cellContent blank" id="letterCell44" for="row4">_</label></td>
-              <input id="row4" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(4)} onBlur={e => focus(e)}></input>
+              <input id="row4" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(4)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow5">
               <td className="birbCell" id="cell50"><label className="cellContent blank" id="letterCell50" for="row5">_</label></td>
@@ -336,7 +339,7 @@ function App() {
               <td className="birbCell" id="cell52"><label className="cellContent blank" id="letterCell52" for="row5">_</label></td>
               <td className="birbCell" id="cell53"><label className="cellContent blank" id="letterCell53" for="row5">_</label></td>
               <td className="birbCell" id="cell54"><label className="cellContent blank" id="letterCell54" for="row5">_</label></td>
-              <input id="row5" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(5)} onBlur={e => focus(e)}></input>
+              <input id="row5" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(5)} onBlur={e => focus(e)}></input>
             </tr>
           </table>
         </div>
