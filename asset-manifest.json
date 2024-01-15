@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/birble-game/static/css/main.367f0e98.css",
-    "main.js": "/birble-game/static/js/main.69c0bdc0.js",
+    "main.js": "/birble-game/static/js/main.a5c87ee1.js",
     "static/js/787.be690fea.chunk.js": "/birble-game/static/js/787.be690fea.chunk.js",
     "static/media/background_starry.jpg": "/birble-game/static/media/background_starry.ce09654d050cd0192872.jpg",
     "static/media/backspace.png": "/birble-game/static/media/backspace.be86c6975ee17f2dea10.png",
@@ -9,11 +9,11 @@
     "index.html": "/birble-game/index.html",
     "static/media/guessWords.txt": "/birble-game/static/media/guessWords.c813c0ca45e444cb26a7.txt",
     "main.367f0e98.css.map": "/birble-game/static/css/main.367f0e98.css.map",
-    "main.69c0bdc0.js.map": "/birble-game/static/js/main.69c0bdc0.js.map",
+    "main.a5c87ee1.js.map": "/birble-game/static/js/main.a5c87ee1.js.map",
     "787.be690fea.chunk.js.map": "/birble-game/static/js/787.be690fea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.367f0e98.css",
-    "static/js/main.69c0bdc0.js"
+    "static/js/main.a5c87ee1.js"
   ]
 }
