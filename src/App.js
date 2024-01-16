@@ -79,8 +79,7 @@ function App() {
     for (var j = inputVal.length; j < 5; j++){
       document.getElementById("letterCell" + rowMobile + j).innerHTML = "_";
       document.getElementById("letterCell" + rowMobile + j).className += " blank";
-    }
-    
+    } 
   }
 
   function resetKeyBoard(){
