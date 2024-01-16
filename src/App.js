@@ -122,7 +122,7 @@ function App() {
         text+="\n"
         for (var i in text){
           if (text[i] === '\n'){
-            words.push(text.slice(i-5,i))
+            words.push(text.slice(i-6,i-1))
           }
         }
         var chosenWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
@@ -181,7 +181,7 @@ function App() {
         text+="\n"
         for (var word in text){
           if (text[word] === '\n'){
-            words.push(text.slice(word-5,word))
+            words.push(text.slice(word-6,word-1))
           }
             }
 
@@ -229,7 +229,7 @@ function App() {
           }
         }
         
-        rowMobile += 1;
+        rowMobile = rowTarget + 1;
         wordMobile ="";
 
         document.getElementById("row" + rowTarget).disabled = true;
