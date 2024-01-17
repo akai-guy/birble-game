@@ -4,7 +4,7 @@
   "icons": [
     {
       "src": "star_image.png",
-      "sizes": "48x48 64x64 32x32 24x24 16x16 192x192 96x96",
+      "sizes": "48x48 192x192 64x64 18x18 32x32 24x24 16x16 96x96 512x512",
       "type": "image/x-icon"
     }
   ],
