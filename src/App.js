@@ -10,6 +10,7 @@ function App() {
 
   var rowMobile = 0;
   var wordMobile = "";
+  var eListenerAdded = false;
   
   genWord();
   if (!isMedia){
@@ -20,7 +21,7 @@ function App() {
   alert("Welcome to BIrBLE! (It's BIBLE with with an r in it and it kinda sounds like wordle, get it do you get it do you get it)\n\nIt's Wordle but you have 6 guesses to guess a randomly chosen Bible-related word. With every guess, each letter will turn green if its in the target word and in the right position, it will turn yellow if its in the target word and in the wrong position, and it will turn red if its not in the target word at all.\n\nThe amount of greens/yellows are limited to the number of occurences a given letter appears in the target word. For example, if the target word is AMONG and you guess MAMMA, only the first M will turn yellow while the rest turn red. If you guess GOING however, the last G will turn green while the first one turns red because there are no more G's in AMONG.\n\n NOTE: This site is playable but not done!");
     
   function mobileLetterDisplay(letter){
-    var inputLetter = document.getElementById(letter).innerHTML; //caps
+    var inputLetter = document.getElementById(letter).innerHTML;
     if (letter==="Enter"){
       submitGuess();
     }
@@ -55,17 +56,23 @@ function App() {
     }
   }
 
+  function detectEnterKeypress(event){
+    eListenerAdded = true;
+    if (event.key === "Enter") {
+      event.preventDefault();
+      submitGuess();
+    }
+  }
+
   function letterDisplay(row){
     rowMobile = row;
     var input = document.getElementById("row" + row); 
     var inputVal = document.getElementById("row" + row).value.toUpperCase(); //capital letter input 
+    
+    if (!eListenerAdded){
+      input.addEventListener("keypress", event => detectEnterKeypress(event));
+    }
 
-    input.addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        submitGuess();
-      }
-    });
     if(!("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(inputVal.slice(inputVal.length - 1)))){
       document.getElementById("row" + row).value = inputVal.slice(0, inputVal.length - 1);
       return "";
@@ -230,6 +237,7 @@ function App() {
         
         rowMobile = rowTarget + 1;
         wordMobile ="";
+        eListenerAdded = false;
 
         document.getElementById("row" + rowTarget).disabled = true;
         if (input === targetWord){
@@ -290,7 +298,7 @@ function App() {
     <div className="App">
       <div className="title">
         <span className="titleText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BIrBLE</strong>&nbsp;&nbsp;&nbsp;</span>
-        <button id="Help" onClick={help}>e</button>
+        <button id="Help" onClick={help}>Hi!</button>
       </div>
       <div className="game">
         <div className="gameTable">
