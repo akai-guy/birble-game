@@ -24,7 +24,6 @@ sodom
 babel
 earth
 egypt
-mount
 sinai
 world
 jireh
@@ -102,3 +101,9 @@ wrong
 honor
 rabbi
 flood
+exile
+wrath
+human
+anger
+alive
+yearn
