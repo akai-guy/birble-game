@@ -449,7 +449,7 @@ function App() {
               <td id="b" className="keyBoardCell" onClick={() => mobileLetterDisplay("b")}>B</td> 
               <td id="n" className="keyBoardCell" onClick={() => mobileLetterDisplay("n")}>N</td> 
               <td id="m" className="keyBoardCell" onClick={() => mobileLetterDisplay("m")}>M</td> 
-              <td id="Enter" className="keyBoardCell" onClick={() => mobileLetterDisplay("Enter")}>Enter</td> &nbsp;
+              <td id="Enter" className="keyBoardCell" onClick={() => mobileLetterDisplay("Enter")}>Enter</td>
             </tr>
           </table>
         </div>

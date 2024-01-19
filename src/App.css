@@ -9,7 +9,23 @@
 }
 
 #Enter{
-  padding:0 0.6vw;
+  padding:0 0.3vw;
+  width:10vw;
+}
+@media only screen and (min-width: 800px){
+  #Enter{
+    padding:0 0.3vw;
+    width:5vw;
+  }
+}
+
+#Backspace{
+  width:7vw;
+}
+@media only screen and (min-width: 800px){
+  #Backspace{
+    width:4vw;
+  }
 }
 
 #newGame{
@@ -62,10 +78,20 @@
 #bspImg{
   display: inline-block;
   vertical-align: middle;
-  width:2.7vw;
-  height:2vw;
+  width:3.8vw;
+  height:2.7vw;
   margin: 0.3vh 0.7vw;
   padding-bottom: 0.15vh;
+}
+@media only screen and (min-width: 800px){
+  #bspImg{
+    display: inline-block;
+    vertical-align: middle;
+    width:2.7vw;
+    height:2vw;
+    margin: 0.3vh 0.7vw;
+    padding-bottom: 0.15vh;
+  }
 }
 
 #Help{
@@ -217,7 +243,6 @@ table {
     font-family:arial, helvetica, sans-serif;
     user-select: none;
     padding:0.6vh;
-    margin-right:0.3vw;
     pointer-events:auto !important;
   }
 }
