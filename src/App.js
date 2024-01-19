@@ -244,6 +244,7 @@ function App() {
           document.getElementById("message").innerHTML = "YOU WIN! :)";
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
+          updateScore();
           document.getElementById("Backspace").className = "keyDisabled";
           document.getElementById("Enter").className = "keyDisabled";
           document.getElementById("newGame").focus();
@@ -252,6 +253,38 @@ function App() {
         if(rowTarget===5){
           document.getElementById("message").innerHTML = "You lost bro. The word was: " + targetWord;
           document.getElementById("message").className = "message messageReveal";
+
+          document.getElementById("cell00").className = "birbCell yellow";
+          document.getElementById("cell01").className = "birbCell yellow";
+          document.getElementById("cell02").className = "birbCell yellow";
+          document.getElementById("cell03").className = "birbCell yellow";
+          document.getElementById("cell04").className = "birbCell yellow";
+          document.getElementById("cell10").className = "birbCell yellow";
+          document.getElementById("cell11").className = "birbCell red";
+          document.getElementById("cell12").className = "birbCell yellow";
+          document.getElementById("cell13").className = "birbCell red";
+          document.getElementById("cell14").className = "birbCell yellow";
+          document.getElementById("cell20").className = "birbCell yellow";
+          document.getElementById("cell21").className = "birbCell yellow";
+          document.getElementById("cell22").className = "birbCell yellow";
+          document.getElementById("cell23").className = "birbCell yellow";
+          document.getElementById("cell24").className = "birbCell yellow";
+          document.getElementById("cell30").className = "birbCell yellow";
+          document.getElementById("cell31").className = "birbCell red";
+          document.getElementById("cell32").className = "birbCell red";
+          document.getElementById("cell33").className = "birbCell red";
+          document.getElementById("cell34").className = "birbCell yellow";
+          document.getElementById("cell40").className = "birbCell red";
+          document.getElementById("cell41").className = "birbCell yellow";
+          document.getElementById("cell42").className = "birbCell yellow";
+          document.getElementById("cell43").className = "birbCell yellow";
+          document.getElementById("cell44").className = "birbCell red";
+          document.getElementById("cell50").className = "birbCell yellow";
+          document.getElementById("cell51").className = "birbCell yellow";
+          document.getElementById("cell52").className = "birbCell yellow";
+          document.getElementById("cell53").className = "birbCell yellow";
+          document.getElementById("cell54").className = "birbCell yellow";
+
           rowMobile = 0;
           document.getElementById("Backspace").className = "keyDisabled";
           document.getElementById("Enter").className = "keyDisabled";
@@ -296,6 +329,20 @@ function App() {
     }
   }
 
+  function updateScore(){
+    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    document.getElementById("score").innerHTML = "Score: " + localStorage.clickcount;
+  }
+
+  function Score() {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount);
+    } else {
+      localStorage.clickcount = 0;
+    }
+    return (<div>Score: {localStorage.clickcount}</div>)
+  }
+
   return (
     <div className="App">
       <div className="title">
@@ -303,6 +350,7 @@ function App() {
         <button id="Help" onClick={help}>Hi!</button>
       </div>
       <div className="game">
+        <span id="score"><Score/></span>
         <div className="gameTable">
           <table className="birbleTable">
             <tr className="letterRow0">
@@ -311,7 +359,7 @@ function App() {
               <td className="birbCell" id="cell02"><label className="cellContent blank" id="letterCell02" for="row0">_</label></td>
               <td className="birbCell" id="cell03"><label className="cellContent blank" id="letterCell03" for="row0">_</label></td>
               <td className="birbCell" id="cell04"><label className="cellContent blank" id="letterCell04" for="row0">_</label></td>
-              <input id="row0" className="birbleRow" type="text" disabled maxLength={5} onChange={() => letterDisplay(0)} onBlur={e => focus(e)}></input>
+              <input id="row0" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(0)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow1">
               <td className="birbCell" id="cell10"><label className="cellContent blank" id="letterCell10" for="row1">_</label></td>
@@ -363,41 +411,41 @@ function App() {
         <div className="keyboard">
           <table className="keyBoardRow">
             <tr>
-              <td id="q" className="keyBoardCell" onClick={() => mobileLetterDisplay("q")}>Q</td> &nbsp;
-              <td id="w" className="keyBoardCell" onClick={() => mobileLetterDisplay("w")}>W</td> &nbsp;
-              <td id="e" className="keyBoardCell" onClick={() => mobileLetterDisplay("e")}>E</td> &nbsp;
-              <td id="r" className="keyBoardCell" onClick={() => mobileLetterDisplay("r")}>R</td> &nbsp;
-              <td id="t" className="keyBoardCell" onClick={() => mobileLetterDisplay("t")}>T</td> &nbsp;
-              <td id="y" className="keyBoardCell" onClick={() => mobileLetterDisplay("y")}>Y</td> &nbsp;
-              <td id="u" className="keyBoardCell" onClick={() => mobileLetterDisplay("u")}>U</td> &nbsp;
-              <td id="i" className="keyBoardCell" onClick={() => mobileLetterDisplay("i")}>I</td> &nbsp;
-              <td id="o" className="keyBoardCell" onClick={() => mobileLetterDisplay("o")}>O</td> &nbsp;
-              <td id="p" className="keyBoardCell" onClick={() => mobileLetterDisplay("p")}>P</td> &nbsp;
+              <td id="q" className="keyBoardCell" onClick={() => mobileLetterDisplay("q")}>Q</td> 
+              <td id="w" className="keyBoardCell" onClick={() => mobileLetterDisplay("w")}>W</td> 
+              <td id="e" className="keyBoardCell" onClick={() => mobileLetterDisplay("e")}>E</td> 
+              <td id="r" className="keyBoardCell" onClick={() => mobileLetterDisplay("r")}>R</td> 
+              <td id="t" className="keyBoardCell" onClick={() => mobileLetterDisplay("t")}>T</td> 
+              <td id="y" className="keyBoardCell" onClick={() => mobileLetterDisplay("y")}>Y</td> 
+              <td id="u" className="keyBoardCell" onClick={() => mobileLetterDisplay("u")}>U</td> 
+              <td id="i" className="keyBoardCell" onClick={() => mobileLetterDisplay("i")}>I</td> 
+              <td id="o" className="keyBoardCell" onClick={() => mobileLetterDisplay("o")}>O</td> 
+              <td id="p" className="keyBoardCell" onClick={() => mobileLetterDisplay("p")}>P</td>
               <td id="Backspace" className="keyBoardCell"><img id="bspImg" src={bsp} alt='br' onClick={() => mobileLetterDisplay("Backspace")}></img></td> &nbsp;
             </tr>
           </table>
           <table className="keyBoardRow">
             <tr>
-              <td id="a" className="keyBoardCell" onClick={() => mobileLetterDisplay("a")}>A</td> &nbsp;
-              <td id="s" className="keyBoardCell" onClick={() => mobileLetterDisplay("s")}>S</td> &nbsp;
-              <td id="d" className="keyBoardCell" onClick={() => mobileLetterDisplay("d")}>D</td> &nbsp;
-              <td id="f" className="keyBoardCell" onClick={() => mobileLetterDisplay("f")}>F</td> &nbsp;
-              <td id="g" className="keyBoardCell" onClick={() => mobileLetterDisplay("g")}>G</td> &nbsp;
-              <td id="h" className="keyBoardCell" onClick={() => mobileLetterDisplay("h")}>H</td> &nbsp;
-              <td id="j" className="keyBoardCell" onClick={() => mobileLetterDisplay("j")}>J</td> &nbsp;
-              <td id="k" className="keyBoardCell" onClick={() => mobileLetterDisplay("k")}>K</td> &nbsp;
-              <td id="l" className="keyBoardCell" onClick={() => mobileLetterDisplay("l")}>L</td> &nbsp;
+              <td id="a" className="keyBoardCell" onClick={() => mobileLetterDisplay("a")}>A</td>
+              <td id="s" className="keyBoardCell" onClick={() => mobileLetterDisplay("s")}>S</td>
+              <td id="d" className="keyBoardCell" onClick={() => mobileLetterDisplay("d")}>D</td>
+              <td id="f" className="keyBoardCell" onClick={() => mobileLetterDisplay("f")}>F</td>
+              <td id="g" className="keyBoardCell" onClick={() => mobileLetterDisplay("g")}>G</td>
+              <td id="h" className="keyBoardCell" onClick={() => mobileLetterDisplay("h")}>H</td>
+              <td id="j" className="keyBoardCell" onClick={() => mobileLetterDisplay("j")}>J</td>
+              <td id="k" className="keyBoardCell" onClick={() => mobileLetterDisplay("k")}>K</td>
+              <td id="l" className="keyBoardCell" onClick={() => mobileLetterDisplay("l")}>L</td>
             </tr>
           </table>
           <table className="keyBoardRow">
             <tr>
-              <td id="z" className="keyBoardCell" onClick={() => mobileLetterDisplay("z")}>Z</td> &nbsp;
-              <td id="x" className="keyBoardCell" onClick={() => mobileLetterDisplay("x")}>X</td> &nbsp;
-              <td id="c" className="keyBoardCell" onClick={() => mobileLetterDisplay("c")}>C</td> &nbsp;
-              <td id="v" className="keyBoardCell" onClick={() => mobileLetterDisplay("v")}>V</td> &nbsp;
-              <td id="b" className="keyBoardCell" onClick={() => mobileLetterDisplay("b")}>B</td> &nbsp;
-              <td id="n" className="keyBoardCell" onClick={() => mobileLetterDisplay("n")}>N</td> &nbsp;
-              <td id="m" className="keyBoardCell" onClick={() => mobileLetterDisplay("m")}>M</td> &nbsp;
+              <td id="z" className="keyBoardCell" onClick={() => mobileLetterDisplay("z")}>Z</td> 
+              <td id="x" className="keyBoardCell" onClick={() => mobileLetterDisplay("x")}>X</td> 
+              <td id="c" className="keyBoardCell" onClick={() => mobileLetterDisplay("c")}>C</td> 
+              <td id="v" className="keyBoardCell" onClick={() => mobileLetterDisplay("v")}>V</td> 
+              <td id="b" className="keyBoardCell" onClick={() => mobileLetterDisplay("b")}>B</td> 
+              <td id="n" className="keyBoardCell" onClick={() => mobileLetterDisplay("n")}>N</td> 
+              <td id="m" className="keyBoardCell" onClick={() => mobileLetterDisplay("m")}>M</td> 
               <td id="Enter" className="keyBoardCell" onClick={() => mobileLetterDisplay("Enter")}>Enter</td> &nbsp;
             </tr>
           </table>

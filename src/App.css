@@ -39,15 +39,24 @@
 .title{
   padding:4vh 0vh 0vh 0vh;
   width: 100%;
-  height: 8vh;
+  height: 7vh;
   margin:auto;
-  font-size:6.015037593984962vh;
+  font-size:6vh;
   background: hsla(0, 0%, 0%, 0.4);
 }
 
 .titleText{
   display: inline-block;
   vertical-align: middle;
+}
+
+#score{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2.5vh;
+  height: 3vh;
+  margin:0vh;
+  padding:0vh;
 }
 
 #bspImg{
@@ -81,8 +90,8 @@
 
 .game{
   background: hsla(0, 0%, 0%, 0.4);
-  height:86vh;
-  padding-top:2vh;
+  height:88vh;
+  padding-top:1vh;
 }
 
 .gameTable{
@@ -96,7 +105,8 @@ table {
 .birbleRow{
   background: transparent;
   border: none;
-  max-width: 0.15037593984962405vh;
+  max-width: 0.1vw;
+  height:0.1vh;
   outline-width: 0;
 }
 
@@ -180,82 +190,83 @@ table {
 }
 
 .keyBoardCell{
-  width:4vw;
+  width:5vw;
   height:4.511278195488722vh;
-  border: 0.3007518796992481vh solid white;
-  border-radius:0.45112781954887216vh;
+  border: 0.25vh solid white;
+  border-radius:0.75vh;
   font-size:3vw;
   background-color: hsla(0, 0%, 100%, 0.2);
   color:white;
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
-  padding:0.45112781954887216vh;
+  padding:0.6vh;
   pointer-events:auto !important;
 }
 
 @media only screen and (min-width: 800px){
   .keyBoardCell{
-    width:2.34375vw;
+    width: 2.5vw;
     height:4.511278195488722vh;
-    border: 0.3007518796992481vh solid white;
-    border-radius:0.45112781954887216vh;
+    border: 0.25vh solid white;
+    border-radius:0.75vh;
     font-size:1.953125vw;
     background-color: hsla(0, 0%, 100%, 0.2);
     color:white;
     text-align:center;
     font-family:arial, helvetica, sans-serif;
     user-select: none;
-    padding:0.45112781954887216vh;
+    padding:0.6vh;
+    margin-right:0.3vw;
     pointer-events:auto !important;
   }
 }
 
 .keyDisabled{
-  width:4vw;
+  width:5vw;
   height:4.511278195488722vh;
-  border: 0.3007518796992481vh solid white;
-  border-radius:0.45112781954887216vh;
+  border: 0.25vh solid white;
+  border-radius:0.75vh;
   font-size:3vw;
   background-color: hsla(0, 0%, 100%, 0.2);
   color:white;
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
-  padding:0.45112781954887216vh;
+  padding:0.6vh;
   pointer-events:none;
 }
 
 @media only screen and (min-width: 800px){
   .keyDisabled{
-    width:2.34375vw;
+    width:2.5vw;
     height:4.511278195488722vh;
-    border: 0.3007518796992481vh solid white;
-    border-radius:0.45112781954887216vh;
+    border: 0.25vh solid white;
+    border-radius:0.75vh;
     font-size:1.953125vw;
     background-color: hsla(0, 0%, 100%, 0.2);
     color:white;
     text-align:center;
     font-family:arial, helvetica, sans-serif;
     user-select: none;
-    padding:0.45112781954887216vh;
+    padding:0.6vh;
     pointer-events:none;
   }
 }
 
 
 .keyGreen{
-  width:4vw;
+  width:5vw;
   height:4.511278195488722vh;
-  border: 0.3007518796992481vh solid white;
-  border-radius:0.45112781954887216vh;
+  border: 0.25vh solid white;
+  border-radius:0.75vh;
   font-size:3vw;
   background-color: hsla(0, 0%, 100%, 0.2);
   color:white;
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
-  padding:0.45112781954887216vh;
+  padding:0.6vh;
   animation-name: revKeyGreen;
   animation-duration:1s;
   animation-fill-mode: forwards;
@@ -263,17 +274,17 @@ table {
 
 @media only screen and (min-width: 800px){
   .keyGreen{
-    width:2.34375vw;
+    width:2.5vw;
     height:4.511278195488722vh;
-    border: 0.3007518796992481vh solid white;
-    border-radius:0.45112781954887216vh;
+    border: 0.25vh solid white;
+    border-radius:0.75vh;
     font-size:1.953125vw;
     background-color: hsla(0, 0%, 100%, 0.2);
     color:white;
     text-align:center;
     font-family:arial, helvetica, sans-serif;
     user-select: none;
-    padding:0.45112781954887216vh;
+    padding:0.6vh;
     animation-name: revKeyGreen;
     animation-duration:1s;
     animation-fill-mode: forwards;
@@ -285,34 +296,34 @@ table {
 }
 
 .keyYellow{
-  width:4vw;
+  width:5vw;
   height:4.511278195488722vh;
-  border: 0.3007518796992481vh solid white;
-  border-radius:0.45112781954887216vh;
+  border: 0.25vh solid white;
+  border-radius:0.75vh;
   font-size:3vw;
   background-color: hsla(0, 0%, 100%, 0.2);
   color:white;
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
-  padding:0.45112781954887216vh;
+  padding:0.6vh;
   animation-name: revKeyYellow;
   animation-duration:1s;
   animation-fill-mode: forwards;
 }
 @media only screen and (min-width: 800px){
   .keyYellow{
-    width:2.34375vw;
+    width:2.5vw;
     height:4.511278195488722vh;
-    border: 0.3007518796992481vh solid white;
-    border-radius:0.45112781954887216vh;
+    border: 0.25vh solid white;
+    border-radius:0.75vh;
     font-size:1.953125vw;
     background-color: hsla(0, 0%, 100%, 0.2);
     color:white;
     text-align:center;
     font-family:arial, helvetica, sans-serif;
     user-select: none;
-    padding:0.45112781954887216vh;
+    padding:0.6vh;
     animation-name: revKeyYellow;
     animation-duration:1s;
     animation-fill-mode: forwards;
@@ -324,34 +335,34 @@ table {
 }
 
 .keyRed{
-  width:4vw;
+  width:5vw;
   height:4.511278195488722vh;
-  border: 0.3007518796992481vh solid white;
-  border-radius:0.45112781954887216vh;
+  border: 0.25vh solid white;
+  border-radius:0.75vh;
   font-size:3vw;
   background-color: hsla(0, 0%, 100%, 0.2);
   color:white;
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
-  padding:0.45112781954887216vh;
+  padding:0.6vh;
   animation-name: revKeyRed;
   animation-duration:1s;
   animation-fill-mode: forwards;
 }
 @media only screen and (min-width: 800px){
   .keyRed{
-    width:2.34375vw;
+    width:2.5vw;
     height:4.511278195488722vh;
-    border: 0.3007518796992481vh solid white;
-    border-radius:0.45112781954887216vh;
+    border: 0.25vh solid white;
+    border-radius:0.75vh;
     font-size:1.953125vw;
     background-color: hsla(0, 0%, 100%, 0.2);
     color:white;
     text-align:center;
     font-family:arial, helvetica, sans-serif;
     user-select: none;
-    padding:0.45112781954887216vh;
+    padding:0.6vh;
     animation-name: revKeyRed;
     animation-duration:1s;
     animation-fill-mode: forwards;
@@ -363,11 +374,18 @@ table {
 }
 
 .keyBoardRow{
-  margin-bottom:0.6015037593984962vh;
+  margin-bottom:0.45vh;
+  border-spacing: 0.6vw 0.3vh;
 }
-
+@media only screen and (min-width: 800px){
+  .keyBoardRow{
+    margin-bottom:0.45vh;
+    border-spacing: 0.3vw 0.3vh;
+  }
+}
 .keyboard{
-  background:hsla(0, 0%, 0%, 0.8);
+  background:hsla(0, 0%, 0%, 0.6);
+  border-radius: 5vw;
   height:22vh;
   margin:auto;
   padding:2vh;
@@ -376,7 +394,8 @@ table {
 
 @media only screen and (min-width: 800px){
   .keyboard{
-    background:hsla(0, 0%, 0%, 0.8);
+    background:hsla(0, 0%, 0%, 0.6);
+    border-radius: 3vw;
     height:22vh;
     margin:auto;
     padding:2vh;
@@ -395,7 +414,7 @@ table {
 
 .message{
   margin:auto;
-  padding:0.7518796992481203vh;
+  padding:0.7518796992481203vh 0.7518796992481203vh 0.45vh 0.7518796992481203vh;
   width:30vh;
   font-size:2.406015037593985vh;
   font-weight:bold;
@@ -430,6 +449,6 @@ table {
 }
 
 #other{
-  margin:0.7518796992481203vh;
-  height:14vh;
+  margin:0.6vh;
+  height:12.6vh;
 }
