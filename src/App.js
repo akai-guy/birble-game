@@ -189,7 +189,7 @@ function App() {
           if (text[word] === '\n'){
             words.push(text.slice(word-5,word))
           }
-            }
+        }
 
         if (input.length !== 5){
           document.getElementById("message").innerHTML = "Too short!";
@@ -244,6 +244,9 @@ function App() {
           document.getElementById("message").innerHTML = "YOU WIN! :)";
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
+          if (targetWord === "SATAN"){
+            alert("May you win over him today :)")
+          }
           updateScore();
           document.getElementById("Backspace").className = "keyDisabled";
           document.getElementById("Enter").className = "keyDisabled";

@@ -107,3 +107,7 @@ human
 anger
 alive
 yearn
+torah
+greek
+satan
+devil
