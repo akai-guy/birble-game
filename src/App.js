@@ -406,7 +406,7 @@ function App() {
             <tr>
               <td className="redM"><label className="cellContentModal">P</label></td>
               <td className="redM"><label className="cellContentModal">E</label></td>
-              <td className= "red"><label className="cellContentModal">T</label></td>
+              <td className="redM"><label className="cellContentModal">T</label></td>
               <td className="greenM"><label className="cellContentModal">E</label></td>
               <td className="redM"><label className="cellContentModal">R</label></td>
             </tr>
