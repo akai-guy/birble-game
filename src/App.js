@@ -11,15 +11,15 @@ function App() {
   var rowMobile = 0;
   var wordMobile = "";
   var eListenerAdded = false;
-  
   genWord();
   if (!isMedia){
     if (document.getElementById("row" + 0)){
       document.getElementById("row" + 0).disabled = false;
     }
   }
-  alert("Welcome to BIrBLE! (It's BIBLE with with an r in it and it kinda sounds like wordle, get it do you get it do you get it)\n\nIt's Wordle but you have 6 guesses to guess a randomly chosen Bible-related word. With every guess, each letter will turn green if its in the target word and in the right position, it will turn yellow if its in the target word and in the wrong position, and it will turn red if its not in the target word at all.\n\nThe amount of greens/yellows are limited to the number of occurences a given letter appears in the target word. For example, if the target word is AMONG and you guess MAMMA, only the first M will turn yellow while the rest turn red. If you guess GOING however, the last G will turn green while the first one turns red because there are no more G's in AMONG.\n\n NOTE: This site is playable but not done!");
-    
+  if (document.getElementById('modal')){
+    openHelp()
+  }
   function mobileLetterDisplay(letter){
     var inputLetter = document.getElementById(letter).innerHTML;
     if (letter==="Enter"){
@@ -314,19 +314,6 @@ function App() {
     processGuess(input, rowMobile);
   }
 
-  function help(){
-    alert("Welcome to BIrBLE! (It's BIBLE with with an r in it and it kinda sounds like wordle, get it do you get it do you get it)\n\nIt's Wordle but you have 6 guesses to guess a randomly chosen Bible-related word. With every guess, each letter will turn green if its in the target word and in the right position, it will turn yellow if its in the target word and in the wrong position, and it will turn red if its not in the target word at all.\n\nThe amount of greens/yellows are limited to the number of occurences a given letter appears in the target word. For example, if the target word is AMONG and you guess MAMMA, only the first M will turn yellow while the rest turn red. If you guess GOING however, the last G will turn green while the first one turns red because there are no more G's in AMONG.\n\n NOTE: This site is playable but not done!");
-    var rowTarget = 0;
-    for (var row=0;row<6;row++){
-      if(document.getElementById("row" + row).value){
-        rowTarget = row;
-      }
-    }
-    if(!isMedia){
-      document.getElementById("row" + rowTarget).focus();
-    }
-  }
-
   function focus(e){
     if(!isMedia){
       if (e.relatedTarget === null) {
@@ -349,12 +336,87 @@ function App() {
     return (<div>Score: {localStorage.clickcount}</div>)
   }
 
+  function openHelp(){
+    document.getElementById('modal').className = "modal open";
+    document.getElementById('modaldiv').className = "overlay open";
+  }
+  function closeHelp(){
+    document.getElementById('modal').className = "modal close";
+    document.getElementById('modaldiv').className = "overlay close";
+    var rowTarget = 0;
+    for (var row=0;row<6;row++){
+      if(document.getElementById("row" + row).value){
+        rowTarget = row;
+      }
+    }
+    if(!isMedia){
+      document.getElementById("row" + rowTarget).focus();
+    }
+  }
+
   return (
     <div className="App">
       <div className="title">
-        <span className="titleText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BIrBLE</strong>&nbsp;&nbsp;&nbsp;</span>
-        <button id="Help" onClick={help}>Hi!</button>
+        <span className="titleText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BIrBLE</strong>&nbsp;&nbsp;&nbsp;</span>
+        <button id="Help" onClick={openHelp}>Hi!</button>
       </div>
+      <section id='modal' className="modal">
+        <div>
+          <button id="exitModal" onClick={closeHelp}>Close</button>
+        </div>
+        <div>
+          <p>
+            Welcome to BIrBLE! (It's BIBLE with with an r in it and it kinda sounds like wordle, get it do you get it do you get it)
+          </p>
+          <p>
+            It's Wordle but you have 6 guesses to guess a randomly chosen Bible-related word (some more related than others).
+          </p>
+          <table>
+            <tr>
+              <td className="birbCellModal"><label className="cellContentModal">C</label></td>
+              <td className="birbCellModal"><label className="cellContentModal">A</label></td>
+              <td className="birbCellModal"><label className="cellContentModal">L</label></td>
+              <td className="birbCellModal"><label className="cellContentModal">E</label></td>
+              <td className="birbCellModal"><label className="cellContentModal">B</label></td>
+            </tr>
+          </table>
+          <p>
+            With every guess, each letter will turn green if its in the target word and in the right position, it will turn yellow if its in the target word and in the wrong position, and it will turn red if its not in the target word at all.
+          </p>
+          <table>
+            <tr>
+              <td className="yellowM"><label className="cellContentModal">E</label></td>
+              <td className="greenM"><label className="cellContentModal">A</label></td>
+              <td className="redM"><label className="cellContentModal">R</label></td>
+              <td className="redM"><label className="cellContentModal">T</label></td>
+              <td className="redM"><label className="cellContentModal">H</label></td>
+            </tr>
+          </table>
+          <p>
+            The amount of greens/yellows are limited to the number of occurences a given letter appears in the target word. For example, if the target word is CALEB and you guess PEACE, only the first E will turn yellow while the other turns red. If you guess PETER however, the last E will turn green while the first one turns red because there are no more E's in CALEB.
+          </p>
+          <table>
+            <tr>
+              <td className="redM"><label className="cellContentModal">P</label></td>
+              <td className="yellowM"><label className="cellContentModal">E</label></td>
+              <td className="yellowM"><label className="cellContentModal">A</label></td>
+              <td className="yellowM"><label className="cellContentModal">C</label></td>
+              <td className="redM"><label className="cellContentModal">E</label></td>
+            </tr>
+            <tr>
+              <td className="redM"><label className="cellContentModal">P</label></td>
+              <td className="redM"><label className="cellContentModal">E</label></td>
+              <td className= "red"><label className="cellContentModal">T</label></td>
+              <td className="greenM"><label className="cellContentModal">E</label></td>
+              <td className="redM"><label className="cellContentModal">R</label></td>
+            </tr>
+          </table>
+          <p>
+            NOTE: This site is playable but not done!
+          </p>
+        </div>
+      </section>
+      <div id='modaldiv' className="overlay hidden"></div>
       <div className="game">
         <span id="score"><Score/></span>
         <div className="gameTable">
