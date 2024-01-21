@@ -244,8 +244,11 @@ function App() {
           document.getElementById("message").innerHTML = "YOU WIN! :)";
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
-          if (targetWord === "SATAN"){
+          if (targetWord === "SATAN" || targetWord === "DEVIL"){
             alert("May you win over him today :)")
+          }
+          if (targetWord === "JESUS"){
+            alert("May he be with you today :)")
           }
           updateScore();
           document.getElementById("Backspace").className = "keyDisabled";

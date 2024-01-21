@@ -112,3 +112,4 @@ greek
 satan
 devil
 truth
+weary
