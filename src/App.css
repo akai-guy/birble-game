@@ -12,14 +12,14 @@
 }
 
 .modal {
-  padding: 2%;
-  width: 80%;
-  min-height: 86%;
+  padding: 2vh 2vw;
+  width: 80vw;
+  min-height: 86vh;
   position: absolute;
-  top: 6%;
-  left:8%;
-  right:8%;
-  bottom: 6%;
+  top: 6vh;
+  left:8vw;
+  right:8vw;
+  bottom: 6vh;
   background-color: hsla(0, 0%, 0%, 0.4);
   border: 0.45vw solid #ddd;
   border-radius: 15px;
