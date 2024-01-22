@@ -11,6 +11,7 @@ function App() {
   var rowMobile = 0;
   var wordMobile = "";
   var eListenerAdded = false;
+  var inPlay = true;
   genWord();
   if (!isMedia){
     if (document.getElementById("row" + 0)){
@@ -21,6 +22,9 @@ function App() {
     openHelp()
   }
   function mobileLetterDisplay(letter){
+    if (!inPlay){
+      return"";
+    }
     var inputLetter = document.getElementById(letter).innerHTML;
     if (letter==="Enter"){
       submitGuess();
@@ -67,7 +71,7 @@ function App() {
   function letterDisplay(row){
     rowMobile = row;
     var input = document.getElementById("row" + row); 
-    var inputVal = document.getElementById("row" + row).value.toUpperCase(); //capital letter input 
+    var inputVal = document.getElementById("row" + row).value.toUpperCase();
     
     if (!eListenerAdded){
       input.addEventListener("keypress", event => detectEnterKeypress(event));
@@ -136,6 +140,7 @@ function App() {
         resetCells();
         resetFields();
         resetKeyBoard();
+        inPlay = true;
         if(!isMedia){
           document.getElementById("row0").focus();
         }
@@ -171,7 +176,6 @@ function App() {
     for (var r=0;r<6;r++){
       for (var c=0;c<5;c++){
         document.getElementById("letterCell" + r + c).innerHTML = "_"
-        
         document.getElementById("letterCell" + r + c).className = "cellContent blank"
         document.getElementById("cell" + r + c).className = "birbCell"
       }
@@ -241,7 +245,24 @@ function App() {
 
         document.getElementById("row" + rowTarget).disabled = true;
         if (input === targetWord){
-          document.getElementById("message").innerHTML = "YOU WIN! :)";
+          if(rowMobile - 1 === 0){
+            document.getElementById("message").innerHTML = "You have superpowers.";
+          }
+          if(rowMobile - 1 === 1){
+            document.getElementById("message").innerHTML = "GREAT JOB!!! :)";
+          }
+          if(rowMobile - 1 === 2){
+            document.getElementById("message").innerHTML = "FANTASTIC! You win! :)";
+          }
+          if(rowMobile - 1 === 3){
+            document.getElementById("message").innerHTML = "AWESOME! You win! :)";
+          }
+          if(rowMobile - 1 === 4){
+            document.getElementById("message").innerHTML = "NICE! You win! :)";
+          }
+          if(rowMobile - 1 === 5){
+            document.getElementById("message").innerHTML = "PHEW! Close one! :)";
+          }
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
           if (targetWord === "SATAN" || targetWord === "DEVIL"){
@@ -251,9 +272,11 @@ function App() {
             alert("May he be with you today :)")
           }
           updateScore();
-          document.getElementById("Backspace").className = "keyDisabled";
-          document.getElementById("Enter").className = "keyDisabled";
+          for (var k=0;k<5;k++){
+            document.getElementById("cell" + rowTarget + k).className = "birbCell green winAnim";
+          }
           document.getElementById("newGame").focus();
+          inPlay = false;
           return"";
         }
         if(rowTarget===5){
@@ -292,9 +315,8 @@ function App() {
           document.getElementById("cell54").className = "birbCell yellow";
 
           rowMobile = 0;
-          document.getElementById("Backspace").className = "keyDisabled";
-          document.getElementById("Enter").className = "keyDisabled";
           document.getElementById("newGame").focus();
+          inPlay = false;
           return "";
         }
         if (!isMedia){
@@ -362,11 +384,8 @@ function App() {
       </div>
       <section id='modal' className="modal">
         <div>
-          <button id="exitModal" onClick={closeHelp}>Close</button>
-        </div>
-        <div>
           <p>
-            Welcome to BIrBLE! (It's BIBLE with with an r in it and it kinda sounds like wordle, get it do you get it do you get it)
+            Welcome to BIrBLE! (It's BIBLE with with an r in it which kinda sounds like Wordle, get it do you get it do you get it)
           </p>
           <p>
             It's Wordle but you have 6 guesses to guess a randomly chosen Bible-related word (some more related than others).
@@ -381,7 +400,7 @@ function App() {
             </tr>
           </table>
           <p>
-            With every guess, each letter will turn green if its in the target word and in the right position, it will turn yellow if its in the target word and in the wrong position, and it will turn red if its not in the target word at all.
+            With every guess, each letter will turn green if its in the target word in the <strong>correct position</strong>, it will turn yellow if its in the target word in the <strong>wrong position</strong>, and it will turn red if its <strong>not in the target word at all.</strong>
           </p>
           <table>
             <tr>
@@ -393,7 +412,7 @@ function App() {
             </tr>
           </table>
           <p>
-            The amount of greens/yellows are limited to the number of occurences a given letter appears in the target word. For example, if the target word is CALEB and you guess PEACE, only the first E will turn yellow while the other turns red. If you guess PETER however, the last E will turn green while the first one turns red because there are no more E's in CALEB.
+            The amount of greens/yellows are limited to the number of times a given letter appears in the target word. For example, if the target word is CALEB and you guess PEACE, only the first E will turn yellow because there is only one E. If you guess PETER however, the last E will turn green while the first one turns red because there are no more E's in CALEB.
           </p>
           <table>
             <tr>
@@ -415,6 +434,9 @@ function App() {
             NOTE: This site is playable but not done!
           </p>
         </div>
+        <div>
+          <button id="exitModal" onClick={closeHelp}>Close</button>
+        </div>
       </section>
       <div id='modaldiv' className="overlay hidden"></div>
       <div className="game">
@@ -422,27 +444,27 @@ function App() {
         <div className="gameTable">
           <table className="birbleTable">
             <tr className="letterRow0">
-              <td className="birbCell" id="cell00"><label className="cellContent blank" id="letterCell00" for="row0">_</label></td>
-              <td className="birbCell" id="cell01"><label className="cellContent blank" id="letterCell01" for="row0">_</label></td>
-              <td className="birbCell" id="cell02"><label className="cellContent blank" id="letterCell02" for="row0">_</label></td>
-              <td className="birbCell" id="cell03"><label className="cellContent blank" id="letterCell03" for="row0">_</label></td>
-              <td className="birbCell" id="cell04"><label className="cellContent blank" id="letterCell04" for="row0">_</label></td>
+              <td className="birbCell" id="cell00"><span className="cellContent blank" id="letterCell00" for="row0">_</span></td>
+              <td className="birbCell" id="cell01"><span className="cellContent blank" id="letterCell01" for="row0">_</span></td>
+              <td className="birbCell" id="cell02"><span className="cellContent blank" id="letterCell02" for="row0">_</span></td>
+              <td className="birbCell" id="cell03"><span className="cellContent blank" id="letterCell03" for="row0">_</span></td>
+              <td className="birbCell" id="cell04"><span className="cellContent blank" id="letterCell04" for="row0">_</span></td>
               <input id="row0" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(0)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow1">
-              <td className="birbCell" id="cell10"><label className="cellContent blank" id="letterCell10" for="row1">_</label></td>
-              <td className="birbCell" id="cell11"><label className="cellContent blank" id="letterCell11" for="row1">_</label></td>
-              <td className="birbCell" id="cell12"><label className="cellContent blank" id="letterCell12" for="row1">_</label></td>
-              <td className="birbCell" id="cell13"><label className="cellContent blank" id="letterCell13" for="row1">_</label></td>
-              <td className="birbCell" id="cell14"><label className="cellContent blank" id="letterCell14" for="row1">_</label></td>
+              <td className="birbCell" id="cell10"><span className="cellContent blank" id="letterCell10" for="row1">_</span></td>
+              <td className="birbCell" id="cell11"><span className="cellContent blank" id="letterCell11" for="row1">_</span></td>
+              <td className="birbCell" id="cell12"><span className="cellContent blank" id="letterCell12" for="row1">_</span></td>
+              <td className="birbCell" id="cell13"><span className="cellContent blank" id="letterCell13" for="row1">_</span></td>
+              <td className="birbCell" id="cell14"><span className="cellContent blank" id="letterCell14" for="row1">_</span></td>
               <input id="row1" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(1)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow2">
-              <td className="birbCell" id="cell20"><label className="cellContent blank" id="letterCell20" for="row2">_</label></td>
-              <td className="birbCell" id="cell21"><label className="cellContent blank" id="letterCell21" for="row2">_</label></td>
-              <td className="birbCell" id="cell22"><label className="cellContent blank" id="letterCell22" for="row2">_</label></td>
-              <td className="birbCell" id="cell23"><label className="cellContent blank" id="letterCell23" for="row2">_</label></td>
-              <td className="birbCell" id="cell24"><label className="cellContent blank" id="letterCell24" for="row2">_</label></td>
+              <td className="birbCell" id="cell20"><span className="cellContent blank" id="letterCell20" for="row2">_</span></td>
+              <td className="birbCell" id="cell21"><span className="cellContent blank" id="letterCell21" for="row2">_</span></td>
+              <td className="birbCell" id="cell22"><span className="cellContent blank" id="letterCell22" for="row2">_</span></td>
+              <td className="birbCell" id="cell23"><span className="cellContent blank" id="letterCell23" for="row2">_</span></td>
+              <td className="birbCell" id="cell24"><span className="cellContent blank" id="letterCell24" for="row2">_</span></td>
               <input id="row2" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(2)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow3">

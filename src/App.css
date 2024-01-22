@@ -222,6 +222,7 @@
 #newGame:active{
   background: hsla(0, 0%, 0%, 0.4);
   color:aqua;
+  ;
   font-weight: bold;
 }
 
@@ -325,19 +326,25 @@ table {
   height: 6.015037593984962vh;
   border: 0.3007518796992481vh solid white;
   font-size:4.511278195488722vh;
-  background-color: hsla(0, 0%, 100%, 0.2);
+  background-color: hsla(0, 12%, 5%, 0.2);
   color:white;
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
+  transform: rotateY(0deg);
   animation-name: revGreen;
-  animation-duration:1s;
+  animation-duration:0.75s;
+  animation-timing-function:ease-in-out;
   animation-fill-mode: forwards;
 }
 
 @keyframes revGreen {
-  from {background-color: hsla(0, 0%, 100%, 0.2)}
-  to {background-color: hsla(120, 100%, 69%, 0.5)}
+  0%   {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(0deg)}
+  50%  {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(90deg)}
+  100% {background-color: hsla(120, 100%, 69%, 0.5);
+        transform: rotateY(0deg)}
 }
 
 .yellow{
@@ -350,14 +357,20 @@ table {
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
+  transform: rotateY(0deg);
   animation-name: revYellow;
-  animation-duration:1s;
+  animation-duration:0.75s;
+  animation-timing-function:ease-in-out;
   animation-fill-mode: forwards;
 }
 
 @keyframes revYellow {
-  from {background-color:  hsla(0, 0%, 100%, 0.2)}
-  to {background-color: rgb(249, 249, 26, 0.4)}
+  0%   {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(0deg)}
+  50%  {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(90deg)}
+  100% {background-color: rgb(249, 249, 26, 0.4);
+        transform: rotateY(0deg)}
 }
 
 .red{
@@ -370,14 +383,20 @@ table {
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
+  transform: rotateY(0deg);
   animation-name: revRed;
-  animation-duration:1s;
+  animation-duration:0.75s;
+  animation-timing-function:ease-in-out;
   animation-fill-mode: forwards;
 }
 
 @keyframes revRed {
-  from {background-color:hsla(0, 0%, 100%, 0.2)}
-  to {background-color:hsla(0, 100%, 50%, 0.5)}
+  0%   {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(0deg)}
+  50%  {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(90deg)}
+  100% {background-color: hsla(0, 100%, 50%, 0.5);
+        transform: rotateY(0deg)}
 }
 
 .birbCell{
@@ -390,6 +409,52 @@ table {
   text-align:center;
   font-family:arial, helvetica, sans-serif;
   user-select: none;
+}
+
+.winAnim{
+  transform: translateY(0px) translateX(0px);
+  width: 6.015037593984962vh;
+  height: 6.015037593984962vh;
+  border: 0.3007518796992481vh solid white;
+  font-size:4.511278195488722vh;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  color:white;
+  text-align:center;
+  font-family:arial, helvetica, sans-serif;
+  user-select: none;
+  transform: rotateY(0deg);
+  animation-name: win;
+  animation-duration:3s;
+  animation-timing-function:linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes win {
+  0%   {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(0deg) translateY(0px) translateX(0px)}
+  10%  {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(90deg) translateY(0px) translateX(0px)}
+  20% {background-color: hsla(120, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(0px) translateX(0px)}
+  45% {background-color: hsla(120, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(0px) translateX(0px)}
+  50% {background-color: hsla(186, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(0px) translateX(0px)}
+  55% {background-color: hsla(234, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(2px) translateX(2px)}
+  60% {background-color: hsla(291, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(0px) translateX(2px)}
+  65% {background-color: hsla(0, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(-2px) translateX(2px)}
+  70% {background-color: hsla(41, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(-2px) translateX(0px)}
+  75% {background-color: hsla(64, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(-2px) translateX(-2px)}
+  80% {background-color: hsla(120, 100%, 69%, 0.5);
+        transform: rotateY(0deg) translateY(0px) translateX(-2px)}
+  90% {background-color: hsla(0, 0%, 100%, 0.2);
+        transform: rotateY(0deg) translateY(0px) translateX(0px)}
 }
 
 .keyBoardCell{
@@ -406,11 +471,14 @@ table {
   padding:0.6vh;
   pointer-events:auto !important;
 }
+.keyBoardCell:active{
+  transform:translateY(2px);
+}
 
 @media only screen and (min-width: 800px){
   .keyBoardCell{
     width: 2.5vw;
-    height:4.511278195488722vh;
+    height:4.5vh;
     border: 0.25vh solid white;
     border-radius:0.75vh;
     font-size:1.953125vw;
@@ -422,40 +490,14 @@ table {
     padding:0.6vh;
     pointer-events:auto !important;
   }
-}
-
-.keyDisabled{
-  width:5vw;
-  height:4.511278195488722vh;
-  border: 0.25vh solid white;
-  border-radius:0.75vh;
-  font-size:3vw;
-  background-color: hsla(0, 0%, 100%, 0.2);
-  color:white;
-  text-align:center;
-  font-family:arial, helvetica, sans-serif;
-  user-select: none;
-  padding:0.6vh;
-  pointer-events:none;
-}
-
-@media only screen and (min-width: 800px){
-  .keyDisabled{
-    width:2.5vw;
-    height:4.511278195488722vh;
-    border: 0.25vh solid white;
-    border-radius:0.75vh;
-    font-size:1.953125vw;
-    background-color: hsla(0, 0%, 100%, 0.2);
-    color:white;
-    text-align:center;
-    font-family:arial, helvetica, sans-serif;
-    user-select: none;
-    padding:0.6vh;
-    pointer-events:none;
+  .keyBoardCell:active{
+    transform:translateY(2px);
   }
 }
 
+.keyBoardCell:hover{
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
 
 .keyGreen{
   width:5vw;
@@ -473,6 +515,9 @@ table {
   animation-duration:1s;
   animation-fill-mode: forwards;
 }
+.keyGreen:hover{
+  background-color: hsla(120, 100%, 69%, 0.3) !important;
+}
 
 @media only screen and (min-width: 800px){
   .keyGreen{
@@ -488,7 +533,7 @@ table {
     user-select: none;
     padding:0.6vh;
     animation-name: revKeyGreen;
-    animation-duration:1s;
+    animation-duration:0.75s;
     animation-fill-mode: forwards;
   }
 }
@@ -513,6 +558,9 @@ table {
   animation-duration:1s;
   animation-fill-mode: forwards;
 }
+.keyYellow:hover{
+  background-color: rgba(249, 249, 26, 0.25) !important;
+}
 @media only screen and (min-width: 800px){
   .keyYellow{
     width:2.5vw;
@@ -527,7 +575,7 @@ table {
     user-select: none;
     padding:0.6vh;
     animation-name: revKeyYellow;
-    animation-duration:1s;
+    animation-duration:0.75s;
     animation-fill-mode: forwards;
   }
 }
@@ -549,8 +597,11 @@ table {
   user-select: none;
   padding:0.6vh;
   animation-name: revKeyRed;
-  animation-duration:1s;
+  animation-duration:0.75s;
   animation-fill-mode: forwards;
+}
+.keyRed:hover{
+  background-color: hsla(0, 100%, 50%, 0.3) !important;
 }
 @media only screen and (min-width: 800px){
   .keyRed{
