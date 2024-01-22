@@ -57,15 +57,29 @@
   }
 }
 
+.blurClose {
+  opacity: 1;
+  animation-name: hideBlur;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes hideBlur {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
 .close {
   opacity: 1;
+  transform: translateY(0px);
   animation-name: hideModal;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 @keyframes hideModal {
-  from {opacity: 1}
-  to {opacity: 0}
+  from {opacity: 1;
+        transform: translateY(0px);}
+  to {opacity: 0;
+      transform: translateY(-500px);}
 }
 
 .open{

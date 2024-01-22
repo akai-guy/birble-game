@@ -364,7 +364,7 @@ function App() {
   }
   function closeHelp(){
     document.getElementById('modal').className = "modal close";
-    document.getElementById('modaldiv').className = "overlay close";
+    document.getElementById('modaldiv').className = "overlay blurClose";
     var rowTarget = 0;
     for (var row=0;row<6;row++){
       if(document.getElementById("row" + row).value){
@@ -435,7 +435,7 @@ function App() {
           </p>
         </div>
         <div>
-          <button id="exitModal" onClick={closeHelp}>Close</button>
+          <button id="exitModal" className="exitMod" onClick={closeHelp}>Close</button>
         </div>
       </section>
       <div id='modaldiv' className="overlay hidden"></div>
