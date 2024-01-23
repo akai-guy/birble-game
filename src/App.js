@@ -245,6 +245,7 @@ function App() {
 
         document.getElementById("row" + rowTarget).disabled = true;
         if (input === targetWord){
+
           if(rowMobile - 1 === 0){
             document.getElementById("message").innerHTML = "You have superpowers.";
           }
@@ -263,14 +264,14 @@ function App() {
           if(rowMobile - 1 === 5){
             document.getElementById("message").innerHTML = "PHEW! Close one! :)";
           }
-          document.getElementById("message").className = "message messageReveal";
-          rowMobile = 0;
           if (targetWord === "SATAN" || targetWord === "DEVIL"){
-            alert("May you win over him today :)")
+            document.getElementById("message").innerHTML = "May you win over him today :)";
           }
           if (targetWord === "JESUS"){
-            alert("May he be with you today :)")
+            document.getElementById("message").innerHTML = "May he be with you today :)";
           }
+          document.getElementById("message").className = "message messageReveal";
+          rowMobile = 0;
           updateScore();
           for (var k=0;k<5;k++){
             document.getElementById("cell" + rowTarget + k).className = "birbCell green winAnim";
