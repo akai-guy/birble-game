@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa0112fb.css",
+    "main.css": "/static/css/main.7e2df388.css",
     "main.js": "/static/js/main.01ea6e11.js",
     "static/js/787.be690fea.chunk.js": "/static/js/787.be690fea.chunk.js",
     "static/media/background_starry.jpg": "/static/media/background_starry.ce09654d050cd0192872.jpg",
@@ -8,12 +8,12 @@
     "static/media/validWords.txt": "/static/media/validWords.2fcfa0a6f71d64809d2e.txt",
     "index.html": "/index.html",
     "static/media/guessWords.txt": "/static/media/guessWords.6d7227a6d376277792da.txt",
-    "main.fa0112fb.css.map": "/static/css/main.fa0112fb.css.map",
+    "main.7e2df388.css.map": "/static/css/main.7e2df388.css.map",
     "main.01ea6e11.js.map": "/static/js/main.01ea6e11.js.map",
     "787.be690fea.chunk.js.map": "/static/js/787.be690fea.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa0112fb.css",
+    "static/css/main.7e2df388.css",
     "static/js/main.01ea6e11.js"
   ]
 }
