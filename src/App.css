@@ -487,6 +487,7 @@ table {
 }
 .keyBoardCell:active{
   transform:translateY(2px);
+  background-color: hsla(0, 0%, 100%, 0.1);
 }
 
 @media only screen and (min-width: 800px){
@@ -507,10 +508,9 @@ table {
   .keyBoardCell:active{
     transform:translateY(2px);
   }
-}
-
-.keyBoardCell:hover{
-  background-color: hsla(0, 0%, 100%, 0.1);
+  .keyBoardCell:hover{
+    background-color: hsla(0, 0%, 100%, 0.1);
+  }
 }
 
 .keyGreen{
@@ -529,7 +529,7 @@ table {
   animation-duration:1s;
   animation-fill-mode: forwards;
 }
-.keyGreen:hover{
+.keyGreen:active{
   background-color: hsla(120, 100%, 69%, 0.3) !important;
 }
 
@@ -549,6 +549,9 @@ table {
     animation-name: revKeyGreen;
     animation-duration:0.75s;
     animation-fill-mode: forwards;
+  }
+  .keyGreen:hover{
+    background-color: hsla(120, 100%, 69%, 0.3) !important;
   }
 }
 @keyframes revKeyGreen {
@@ -572,7 +575,7 @@ table {
   animation-duration:1s;
   animation-fill-mode: forwards;
 }
-.keyYellow:hover{
+.keyYellow:active{
   background-color: rgba(249, 249, 26, 0.25) !important;
 }
 @media only screen and (min-width: 800px){
@@ -591,6 +594,9 @@ table {
     animation-name: revKeyYellow;
     animation-duration:0.75s;
     animation-fill-mode: forwards;
+  }
+  .keyYellow:hover{
+    background-color: rgba(249, 249, 26, 0.25) !important;
   }
 }
 @keyframes revKeyYellow {
@@ -614,7 +620,7 @@ table {
   animation-duration:0.75s;
   animation-fill-mode: forwards;
 }
-.keyRed:hover{
+.keyRed:active{
   background-color: hsla(0, 100%, 50%, 0.3) !important;
 }
 @media only screen and (min-width: 800px){
@@ -633,6 +639,9 @@ table {
     animation-name: revKeyRed;
     animation-duration:1s;
     animation-fill-mode: forwards;
+  }
+  .keyRed:hover{
+    background-color: hsla(0, 100%, 50%, 0.3) !important;
   }
 }
 @keyframes revKeyRed {
