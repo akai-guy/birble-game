@@ -250,7 +250,7 @@ function App() {
             document.getElementById("message").innerHTML = "You have superpowers.";
           }
           if(rowMobile - 1 === 1){
-            document.getElementById("message").innerHTML = "GREAT JOB!!! :)";
+            document.getElementById("message").innerHTML = "GREAT JOB!!! You are amazing :)";
           }
           if(rowMobile - 1 === 2){
             document.getElementById("message").innerHTML = "FANTASTIC! You win! :)";
@@ -269,6 +269,9 @@ function App() {
           }
           if (targetWord === "JESUS"){
             document.getElementById("message").innerHTML = "May he be with you today :)";
+          }
+          if (targetWord === "CALEB"){
+            document.getElementById("message").innerHTML = "Its me I made the game :)";
           }
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
