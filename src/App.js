@@ -371,14 +371,8 @@ function App() {
   function closeHelp(){
     document.getElementById('modal').className = "modal close";
     document.getElementById('modaldiv').className = "overlay blurClose";
-    var rowTarget = 0;
-    for (var row=0;row<6;row++){
-      if(document.getElementById("row" + row).value){
-        rowTarget = row;
-      }
-    }
     if(!isMedia){
-      document.getElementById("row" + rowTarget).focus();
+      document.getElementById("row" + rowMobile).focus();
     }
   }
 
