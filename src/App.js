@@ -276,9 +276,11 @@ function App() {
           document.getElementById("message").className = "message messageReveal";
           rowMobile = 0;
           updateScore();
-          for (var k=0;k<5;k++){
-            document.getElementById("cell" + rowTarget + k).className = "birbCell green winAnim";
-          }
+          document.getElementById("cell" + rowTarget + 0).className = "birbCell green winAnim0";
+          document.getElementById("cell" + rowTarget + 1).className = "birbCell green winAnim1";
+          document.getElementById("cell" + rowTarget + 2).className = "birbCell green winAnim2";
+          document.getElementById("cell" + rowTarget + 3).className = "birbCell green winAnim3";
+          document.getElementById("cell" + rowTarget + 4).className = "birbCell green winAnim4";
           document.getElementById("newGame").focus();
           inPlay = false;
           return"";
