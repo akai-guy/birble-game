@@ -51,11 +51,11 @@ function App() {
 
       for (var i = 0; i < wordMobile.length; i++){
       document.getElementById("letterCell" + rowMobile + i).innerHTML = wordMobile[i];
-      document.getElementById("letterCell" + rowMobile + i).className -= " blank";
+      document.getElementById("letterCell" + rowMobile + i).className = "";
       }
       for (var j = wordMobile.length; j < 5; j++){
         document.getElementById("letterCell" + rowMobile + j).innerHTML = "_";
-        document.getElementById("letterCell" + rowMobile + j).className += " blank";
+        document.getElementById("letterCell" + rowMobile + j).className = "blank";
       }
     }
   }
@@ -176,7 +176,7 @@ function App() {
     for (var r=0;r<6;r++){
       for (var c=0;c<5;c++){
         document.getElementById("letterCell" + r + c).innerHTML = "_"
-        document.getElementById("letterCell" + r + c).className = "cellContent blank"
+        document.getElementById("letterCell" + r + c).className = "blank"
         document.getElementById("cell" + r + c).className = "birbCell"
       }
     }
@@ -444,51 +444,51 @@ function App() {
         <div className="gameTable">
           <table className="birbleTable">
             <tr className="letterRow0">
-              <td className="birbCell" id="cell00"><span className="cellContent blank" id="letterCell00" for="row0">_</span></td>
-              <td className="birbCell" id="cell01"><span className="cellContent blank" id="letterCell01" for="row0">_</span></td>
-              <td className="birbCell" id="cell02"><span className="cellContent blank" id="letterCell02" for="row0">_</span></td>
-              <td className="birbCell" id="cell03"><span className="cellContent blank" id="letterCell03" for="row0">_</span></td>
-              <td className="birbCell" id="cell04"><span className="cellContent blank" id="letterCell04" for="row0">_</span></td>
+              <td className="birbCell" id="cell00"><span className="blank" id="letterCell00" for="row0">_</span></td>
+              <td className="birbCell" id="cell01"><span className="blank" id="letterCell01" for="row0">_</span></td>
+              <td className="birbCell" id="cell02"><span className="blank" id="letterCell02" for="row0">_</span></td>
+              <td className="birbCell" id="cell03"><span className="blank" id="letterCell03" for="row0">_</span></td>
+              <td className="birbCell" id="cell04"><span className="blank" id="letterCell04" for="row0">_</span></td>
               <input id="row0" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(0)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow1">
-              <td className="birbCell" id="cell10"><span className="cellContent blank" id="letterCell10" for="row1">_</span></td>
-              <td className="birbCell" id="cell11"><span className="cellContent blank" id="letterCell11" for="row1">_</span></td>
-              <td className="birbCell" id="cell12"><span className="cellContent blank" id="letterCell12" for="row1">_</span></td>
-              <td className="birbCell" id="cell13"><span className="cellContent blank" id="letterCell13" for="row1">_</span></td>
-              <td className="birbCell" id="cell14"><span className="cellContent blank" id="letterCell14" for="row1">_</span></td>
+              <td className="birbCell" id="cell10"><span className="blank" id="letterCell10" for="row1">_</span></td>
+              <td className="birbCell" id="cell11"><span className="blank" id="letterCell11" for="row1">_</span></td>
+              <td className="birbCell" id="cell12"><span className="blank" id="letterCell12" for="row1">_</span></td>
+              <td className="birbCell" id="cell13"><span className="blank" id="letterCell13" for="row1">_</span></td>
+              <td className="birbCell" id="cell14"><span className="blank" id="letterCell14" for="row1">_</span></td>
               <input id="row1" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(1)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow2">
-              <td className="birbCell" id="cell20"><span className="cellContent blank" id="letterCell20" for="row2">_</span></td>
-              <td className="birbCell" id="cell21"><span className="cellContent blank" id="letterCell21" for="row2">_</span></td>
-              <td className="birbCell" id="cell22"><span className="cellContent blank" id="letterCell22" for="row2">_</span></td>
-              <td className="birbCell" id="cell23"><span className="cellContent blank" id="letterCell23" for="row2">_</span></td>
-              <td className="birbCell" id="cell24"><span className="cellContent blank" id="letterCell24" for="row2">_</span></td>
+              <td className="birbCell" id="cell20"><span className="blank" id="letterCell20" for="row2">_</span></td>
+              <td className="birbCell" id="cell21"><span className="blank" id="letterCell21" for="row2">_</span></td>
+              <td className="birbCell" id="cell22"><span className="blank" id="letterCell22" for="row2">_</span></td>
+              <td className="birbCell" id="cell23"><span className="blank" id="letterCell23" for="row2">_</span></td>
+              <td className="birbCell" id="cell24"><span className="blank" id="letterCell24" for="row2">_</span></td>
               <input id="row2" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(2)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow3">
-              <td className="birbCell" id="cell30"><label className="cellContent blank" id="letterCell30" for="row3">_</label></td>
-              <td className="birbCell" id="cell31"><label className="cellContent blank" id="letterCell31" for="row3">_</label></td>
-              <td className="birbCell" id="cell32"><label className="cellContent blank" id="letterCell32" for="row3">_</label></td>
-              <td className="birbCell" id="cell33"><label className="cellContent blank" id="letterCell33" for="row3">_</label></td>
-              <td className="birbCell" id="cell34"><label className="cellContent blank" id="letterCell34" for="row3">_</label></td>
+              <td className="birbCell" id="cell30"><label className="blank" id="letterCell30" for="row3">_</label></td>
+              <td className="birbCell" id="cell31"><label className="blank" id="letterCell31" for="row3">_</label></td>
+              <td className="birbCell" id="cell32"><label className="blank" id="letterCell32" for="row3">_</label></td>
+              <td className="birbCell" id="cell33"><label className="blank" id="letterCell33" for="row3">_</label></td>
+              <td className="birbCell" id="cell34"><label className="blank" id="letterCell34" for="row3">_</label></td>
               <input id="row3" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(3)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow4">
-              <td className="birbCell" id="cell40"><label className="cellContent blank" id="letterCell40" for="row4">_</label></td>
-              <td className="birbCell" id="cell41"><label className="cellContent blank" id="letterCell41" for="row4">_</label></td>
-              <td className="birbCell" id="cell42"><label className="cellContent blank" id="letterCell42" for="row4">_</label></td>
-              <td className="birbCell" id="cell43"><label className="cellContent blank" id="letterCell43" for="row4">_</label></td>
-              <td className="birbCell" id="cell44"><label className="cellContent blank" id="letterCell44" for="row4">_</label></td>
+              <td className="birbCell" id="cell40"><label className="blank" id="letterCell40" for="row4">_</label></td>
+              <td className="birbCell" id="cell41"><label className="blank" id="letterCell41" for="row4">_</label></td>
+              <td className="birbCell" id="cell42"><label className="blank" id="letterCell42" for="row4">_</label></td>
+              <td className="birbCell" id="cell43"><label className="blank" id="letterCell43" for="row4">_</label></td>
+              <td className="birbCell" id="cell44"><label className="blank" id="letterCell44" for="row4">_</label></td>
               <input id="row4" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(4)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow5">
-              <td className="birbCell" id="cell50"><label className="cellContent blank" id="letterCell50" for="row5">_</label></td>
-              <td className="birbCell" id="cell51"><label className="cellContent blank" id="letterCell51" for="row5">_</label></td>
-              <td className="birbCell" id="cell52"><label className="cellContent blank" id="letterCell52" for="row5">_</label></td>
-              <td className="birbCell" id="cell53"><label className="cellContent blank" id="letterCell53" for="row5">_</label></td>
-              <td className="birbCell" id="cell54"><label className="cellContent blank" id="letterCell54" for="row5">_</label></td>
+              <td className="birbCell" id="cell50"><label className="blank" id="letterCell50" for="row5">_</label></td>
+              <td className="birbCell" id="cell51"><label className="blank" id="letterCell51" for="row5">_</label></td>
+              <td className="birbCell" id="cell52"><label className="blank" id="letterCell52" for="row5">_</label></td>
+              <td className="birbCell" id="cell53"><label className="blank" id="letterCell53" for="row5">_</label></td>
+              <td className="birbCell" id="cell54"><label className="blank" id="letterCell54" for="row5">_</label></td>
               <input id="row5" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(5)} onBlur={e => focus(e)}></input>
             </tr>
           </table>
