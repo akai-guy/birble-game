@@ -114,3 +114,4 @@ devil
 truth
 weary
 elder
+altar
