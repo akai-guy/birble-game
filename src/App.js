@@ -21,6 +21,8 @@ function App() {
   if (document.getElementById('modal')){
     openHelp()
   }
+
+
   function mobileLetterDisplay(letter){
     if (!inPlay){
       return"";
@@ -81,8 +83,14 @@ function App() {
       document.getElementById("row" + row).value = inputVal.slice(0, inputVal.length - 1);
       return "";
     }
-    wordMobile += inputVal.slice(inputVal.length - 1);
 
+    if(wordMobile.length>inputVal.length){
+      wordMobile = wordMobile.slice(0,inputVal.length - 1);
+    }
+    else{
+      wordMobile = wordMobile + inputVal.slice(inputVal.length - 1);
+    }
+    
     for (var i = 0; i < inputVal.length; i++){
       document.getElementById("letterCell" + rowMobile + i).innerHTML = inputVal[i];
       document.getElementById("letterCell" + rowMobile + i).className -= " blank";
@@ -385,10 +393,10 @@ function App() {
       <section id='modal' className="modal">
         <div>
           <p>
-            Welcome to BIrBLE! (It's BIBLE with with an r in it which kinda sounds like Wordle, get it do you get it do you get it)
+            Welcome to BIrBLE! (It's BIBLE with with an r in it which kinda sounds like [REDACTED WORD GAME], get it do you get it do you get it)
           </p>
           <p>
-            It's Wordle but you have 6 guesses to guess a randomly chosen Bible-related word (some more related than others).
+            It's [REDACTED WORD GAME] but you have 6 guesses to guess a randomly chosen Bible-related word (some more related than others).
           </p>
           <table>
             <tr>
