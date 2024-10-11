@@ -25,15 +25,15 @@
   border-radius: 15px;
   z-index: 2;
 }
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 850px){
   .modal {
     padding: 2%;
-    width: 46%;
+    width: 56%;
     min-height: 65%;
     position: absolute;
     top: 11%;
-    left:25%;
-    right:25%;
+    left:20%;
+    right:20%;
     bottom: 10%;
     background-color: hsla(0, 0%, 0%, 0.4);
     border: 0.45vw solid #ddd;
@@ -43,12 +43,12 @@
 }
 
 .modal p {
-  font-size: 2vh;
+  font-size: 3w;
   color: white;
   margin-top: 1.2vh;
   margin-bottom: 0.2vh;
 }
-@media only screen and (min-width:800px){
+@media only screen and (min-width:850px){
   .modal p {
     font-size: 2vh;
     color: white;
@@ -106,21 +106,9 @@
   z-index: 1;
 }
 
-.birbCellModal{
-  width: 4.5vh;
-  height: 4.5vh;
-  border: 0.3007518796992481vh solid white;
-  font-size:4.511278195488722vh;
-  background-color: hsla(0, 0%, 100%, 0.2);
-  color:white;
-  text-align:center;
-  font-family:arial, helvetica, sans-serif;
-  user-select: none;
-}
-
 .greenM{
   width: 4.5vh;
-  height: 4.5vh;
+  height: 4.3vh;
   border: 0.3007518796992481vh solid white;
   font-size:4.511278195488722vh;
   background-color: hsla(120, 100%, 69%, 0.5);
@@ -132,7 +120,7 @@
 
 .yellowM{
   width: 4.5vh;
-  height: 4.5vh;
+  height: 4.3vh;
   border: 0.3007518796992481vh solid white;
   font-size:4.511278195488722vh;
   background-color: rgb(249, 249, 26, 0.4);
@@ -144,7 +132,7 @@
 
 .redM{
   width: 4.5vh;
-  height: 4.5vh;
+  height: 4.3vh;
   border: 0.3007518796992481vh solid white;
   font-size:4.511278195488722vh;
   background-color: hsla(0, 100%, 50%, 0.5);
@@ -160,7 +148,7 @@
 
 #exitModal{
   background: hsla(0, 0%, 0%, 0.2);
-  width: 14vw;
+  width: 18vw;
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 2vh;
@@ -175,7 +163,7 @@
 @media only screen and (min-width: 800px){
   #exitModal{
     background: hsla(0, 0%, 0%, 0.2);
-    width: 5vw;
+    width: 10vw;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2vh;
@@ -299,6 +287,21 @@
   pointer-events: auto;
   border-radius: 50%;
 }
+@media only screen and (max-width: 350px){
+  #Help{
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("icon.png");
+    background-size: 100% 100%;
+    width:3vh;
+    height:3vh;
+    border:none;
+    color:transparent;
+    background-color: transparent;
+    pointer-events: auto;
+    border-radius: 50%;
+  }
+}
 #Help:hover{
   background-color: hsla(0, 0%, 100%, 0.2);
 }
@@ -323,8 +326,8 @@ table {
 .birbleRow{
   background: transparent;
   border: none;
-  max-width: 0.1vw;
-  height:0.1vh;
+  max-width: 0.01vw;
+  height:0.01vh;
   outline-width: 0;
 }
 

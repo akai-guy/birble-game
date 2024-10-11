@@ -32,16 +32,17 @@ function App() {
       submitGuess();
     }
     else{
+      var inputVal;
       if (letter==="Backspace"){
         wordMobile = wordMobile.slice(0, wordMobile.length - 1)
-        var inputVal = document.getElementById("row" + rowMobile).value.toUpperCase();
+        inputVal = document.getElementById("row" + rowMobile).value.toUpperCase();
         document.getElementById("row" + rowMobile).value = inputVal.slice(0, inputVal.length - 1);
         inputVal = inputVal.slice(0, inputVal.length - 1);
       }
       else{
         wordMobile += inputLetter;
         document.getElementById("row" + rowMobile).value += inputLetter;
-        var inputVal = document.getElementById("row" + rowMobile).value.toUpperCase();
+        inputVal = document.getElementById("row" + rowMobile).value.toUpperCase();
       }
       if (wordMobile.length > 5){
         wordMobile = wordMobile.slice(0, 5);
@@ -387,28 +388,32 @@ function App() {
   return (
     <div className="App">
       <div className="title">
-        <span className="titleText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BIrBLE</strong>&nbsp;&nbsp;&nbsp;</span>
+        <span className="titleText">&nbsp;&nbsp;&nbsp;&nbsp;<strong>BIrBLE</strong>&nbsp;</span>
         <button id="Help" onClick={openHelp}>Hi!</button>
       </div>
       <section id='modal' className="modal">
         <div>
           <p>
-            Welcome to BIrBLE! (It's BIBLE with with an r in it which kinda sounds like [REDACTED WORD GAME], get it do you get it do you get it)
+            Welcome to BIrBLE!
+            {// (It's BIBLE with with an r in it which kinda sounds like [REDACTED WORD GAME], get it do you get it do you get it)
+            }
           </p>
           <p>
-            It's [REDACTED WORD GAME] but you have 6 guesses to guess a randomly chosen Bible-related word (some more related than others).
+            {//It's [REDACTED WORD GAME] but you have 6 guesses to guess a randomly chosen Bible-related word (some more related than others).
+            }
+            You have 6 guesses to guess a randomly chosen Bible-related word (some more related than others).
           </p>
           <table>
             <tr>
-              <td className="birbCellModal"><label className="cellContentModal">C</label></td>
-              <td className="birbCellModal"><label className="cellContentModal">A</label></td>
-              <td className="birbCellModal"><label className="cellContentModal">L</label></td>
-              <td className="birbCellModal"><label className="cellContentModal">E</label></td>
-              <td className="birbCellModal"><label className="cellContentModal">B</label></td>
+              <td className="greenM"><label className="cellContentModal">C</label></td>
+              <td className="greenM"><label className="cellContentModal">A</label></td>
+              <td className="greenM"><label className="cellContentModal">L</label></td>
+              <td className="greenM"><label className="cellContentModal">E</label></td>
+              <td className="greenM"><label className="cellContentModal">B</label></td>
             </tr>
           </table>
           <p>
-            With every guess, each letter will turn green if its in the target word in the <strong>correct position</strong>, it will turn yellow if its in the target word in the <strong>wrong position</strong>, and it will turn red if its <strong>not in the target word at all.</strong>
+            With every guess, each letter will turn green if its in the target word in the <strong>correct position</strong>, it will turn yellow if its in the target word in the <strong>wrong position</strong>, and it will turn red if its <strong>not in the target word.</strong>
           </p>
           <table>
             <tr>
@@ -420,7 +425,7 @@ function App() {
             </tr>
           </table>
           <p>
-            The amount of greens/yellows are limited to the number of times a given letter appears in the target word. For example, if the target word is CALEB and you guess PEACE, only the first E will turn yellow because there is only one E. If you guess PETER however, the last E will turn green while the first one turns red because there are no more E's in CALEB.
+            The amount of greens/yellows are limited to the number of times a letter appears in the target word. For example, if the target word is CALEB and you guess PEACE, only the first E will turn yellow as there is only one E. If you guess PETER, the <strong>last</strong> E will turn green because there is only one E in CALEB.
           </p>
           <table>
             <tr>
@@ -438,9 +443,7 @@ function App() {
               <td className="redM"><label className="cellContentModal">R</label></td>
             </tr>
           </table>
-          <p>
-            NOTE: This site is playable but not done!
-          </p>
+          <p>Thanks for playing</p>
         </div>
         <div>
           <button id="exitModal" className="exitMod" onClick={closeHelp}>Close</button>
@@ -457,7 +460,7 @@ function App() {
               <td className="birbCell" id="cell02"><span className="blank" id="letterCell02" for="row0">_</span></td>
               <td className="birbCell" id="cell03"><span className="blank" id="letterCell03" for="row0">_</span></td>
               <td className="birbCell" id="cell04"><span className="blank" id="letterCell04" for="row0">_</span></td>
-              <input id="row0" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(0)} onBlur={e => focus(e)}></input>
+              <input id="row0" autoComplete='false' className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(0)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow1">
               <td className="birbCell" id="cell10"><span className="blank" id="letterCell10" for="row1">_</span></td>
@@ -465,7 +468,7 @@ function App() {
               <td className="birbCell" id="cell12"><span className="blank" id="letterCell12" for="row1">_</span></td>
               <td className="birbCell" id="cell13"><span className="blank" id="letterCell13" for="row1">_</span></td>
               <td className="birbCell" id="cell14"><span className="blank" id="letterCell14" for="row1">_</span></td>
-              <input id="row1" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(1)} onBlur={e => focus(e)}></input>
+              <input id="row1" autoComplete='false' className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(1)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow2">
               <td className="birbCell" id="cell20"><span className="blank" id="letterCell20" for="row2">_</span></td>
@@ -473,7 +476,7 @@ function App() {
               <td className="birbCell" id="cell22"><span className="blank" id="letterCell22" for="row2">_</span></td>
               <td className="birbCell" id="cell23"><span className="blank" id="letterCell23" for="row2">_</span></td>
               <td className="birbCell" id="cell24"><span className="blank" id="letterCell24" for="row2">_</span></td>
-              <input id="row2" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(2)} onBlur={e => focus(e)}></input>
+              <input id="row2" autoComplete='false' className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(2)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow3">
               <td className="birbCell" id="cell30"><label className="blank" id="letterCell30" for="row3">_</label></td>
@@ -481,7 +484,7 @@ function App() {
               <td className="birbCell" id="cell32"><label className="blank" id="letterCell32" for="row3">_</label></td>
               <td className="birbCell" id="cell33"><label className="blank" id="letterCell33" for="row3">_</label></td>
               <td className="birbCell" id="cell34"><label className="blank" id="letterCell34" for="row3">_</label></td>
-              <input id="row3" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(3)} onBlur={e => focus(e)}></input>
+              <input id="row3" autoComplete='false' className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(3)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow4">
               <td className="birbCell" id="cell40"><label className="blank" id="letterCell40" for="row4">_</label></td>
@@ -489,7 +492,7 @@ function App() {
               <td className="birbCell" id="cell42"><label className="blank" id="letterCell42" for="row4">_</label></td>
               <td className="birbCell" id="cell43"><label className="blank" id="letterCell43" for="row4">_</label></td>
               <td className="birbCell" id="cell44"><label className="blank" id="letterCell44" for="row4">_</label></td>
-              <input id="row4" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(4)} onBlur={e => focus(e)}></input>
+              <input id="row4" autoComplete='false' className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(4)} onBlur={e => focus(e)}></input>
             </tr>
             <tr className="letterRow5">
               <td className="birbCell" id="cell50"><label className="blank" id="letterCell50" for="row5">_</label></td>
@@ -497,13 +500,13 @@ function App() {
               <td className="birbCell" id="cell52"><label className="blank" id="letterCell52" for="row5">_</label></td>
               <td className="birbCell" id="cell53"><label className="blank" id="letterCell53" for="row5">_</label></td>
               <td className="birbCell" id="cell54"><label className="blank" id="letterCell54" for="row5">_</label></td>
-              <input id="row5" className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(5)} onBlur={e => focus(e)}></input>
+              <input id="row5" autoComplete='false' className="birbleRow" type="text" disabled maxLength="5" onChange={() => letterDisplay(5)} onBlur={e => focus(e)}></input>
             </tr>
           </table>
         </div>
         <div id="other">
           <button id="newGame" onClick={genWord}>New Game</button>
-          <input id="wordToGuess" type="text" maxLength={5} minLength={5}></input>
+          <input id="wordToGuess" autoComplete='false' type="text" maxLength={5} minLength={5}></input>
           <div id="message" className="message messageHidden"></div>
         </div>
         <div className="keyboard">

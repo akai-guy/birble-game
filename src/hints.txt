@@ -115,3 +115,4 @@ truth
 weary
 elder
 altar
+latin
