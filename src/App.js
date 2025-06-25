@@ -443,7 +443,7 @@ function App() {
               <td className="redM"><label className="cellContentModal">R</label></td>
             </tr>
           </table>
-          <p>Thanks for playing</p>
+          <p>Thanks for playing!</p>
         </div>
         <div>
           <button id="exitModal" className="exitMod" onClick={closeHelp}>Close</button>
