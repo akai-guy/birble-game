@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.47ab3595.css",
-    "main.js": "/static/js/main.21a4a87d.js",
-    "static/js/787.be690fea.chunk.js": "/static/js/787.be690fea.chunk.js",
-    "static/media/background_starry.jpg": "/static/media/background_starry.ce09654d050cd0192872.jpg",
-    "static/media/backspace.png": "/static/media/backspace.be86c6975ee17f2dea10.png",
-    "static/media/validWords.txt": "/static/media/validWords.c7ea9499f796b59b9d7c.txt",
-    "index.html": "/index.html",
-    "static/media/guessWords.txt": "/static/media/guessWords.d9dd1a1d5977534eb758.txt",
-    "main.47ab3595.css.map": "/static/css/main.47ab3595.css.map",
-    "main.21a4a87d.js.map": "/static/js/main.21a4a87d.js.map",
-    "787.be690fea.chunk.js.map": "/static/js/787.be690fea.chunk.js.map"
+    "main.css": "/akai-guy/static/css/main.5af303fe.css",
+    "main.js": "/akai-guy/static/js/main.c43ed564.js",
+    "static/js/787.be690fea.chunk.js": "/akai-guy/static/js/787.be690fea.chunk.js",
+    "static/media/background_starry.jpg": "/akai-guy/static/media/background_starry.ce09654d050cd0192872.jpg",
+    "static/media/backspace.png": "/akai-guy/static/media/backspace.be86c6975ee17f2dea10.png",
+    "static/media/validWords.txt": "/akai-guy/static/media/validWords.c7ea9499f796b59b9d7c.txt",
+    "index.html": "/akai-guy/index.html",
+    "static/media/guessWords.txt": "/akai-guy/static/media/guessWords.d9dd1a1d5977534eb758.txt",
+    "main.5af303fe.css.map": "/akai-guy/static/css/main.5af303fe.css.map",
+    "main.c43ed564.js.map": "/akai-guy/static/js/main.c43ed564.js.map",
+    "787.be690fea.chunk.js.map": "/akai-guy/static/js/787.be690fea.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.47ab3595.css",
-    "static/js/main.21a4a87d.js"
+    "static/css/main.5af303fe.css",
+    "static/js/main.c43ed564.js"
   ]
 }
